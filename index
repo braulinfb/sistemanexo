@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Arquitectura NEXO de Compradores — Clientes por WhatsApp con Meta Ads</title>
+  <meta name="description" content="Arquitectura NEXO de Compradores: configuración llave en mano de Meta Ads + WhatsApp. BM verificado, 3 campañas listas, prevención de bloqueos y 12 meses de IA Pro. Especial para emprendedores y negocios locales." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#0b0b0b" />
+  <!-- Cambia esta URL al dominio de tu GitHub Pages -->
+  <link rel="canonical" href="https://TU-USUARIO.github.io/TU-REPO/" />
+
+  <!-- Open Graph / Twitter Cards -->
+  <meta property="og:title" content="Arquitectura NEXO de Compradores — Clientes por WhatsApp con Meta Ads" />
+  <meta property="og:description" content="BM verificado, 3 campañas listas, prevención de bloqueos y 12 meses de IA Pro. De anuncio a chat, sin fricción." />
+  <meta property="og:image" content="https://TU-USUARIO.github.io/TU-REPO/assets/img/og-cover.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Braulin Fernando Betancourt" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Preconexión de fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Preload de la imagen de hero (usa tus archivos locales) -->
+  <link rel="preload" as="image"
+        href="assets/img/hero-business-1600.webp"
+        imagesrcset="assets/img/hero-business-800.webp 800w, assets/img/hero-business-1200.webp 1200w, assets/img/hero-business-1600.webp 1600w"
+        imagesizes="100vw" />
+
+  <style>
+    :root{
+      --black:#0b0b0b; --dark:#121212; --white:#ffffff; --muted:#bdbdbd;
+      --gold:#D4AF37; --gold-2:#c9a02e; --glass: rgba(255,255,255,.06);
+      --max:1140px; --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.3);
+    }
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;padding:0;background:var(--black);color:var(--white);
+      font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.5
+    }
+    img{max-width:100%;height:auto;display:block;border:0}
+    a{color:var(--gold);text-decoration:none}
+    .container{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
+    .eyebrow{letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700;font-size:.78rem}
+    .h1{font-size:clamp(1.8rem,4.5vw,3rem);line-height:1.15;margin:.35rem 0 .8rem;font-weight:800}
+    .lead{color:#e8e8e8;font-size:clamp(1rem,2.6vw,1.125rem)}
+    .btn{
+      display:inline-flex;align-items:center;gap:.6rem;background:var(--gold);color:#111;
+      font-weight:800;border:none;border-radius:999px;padding:14px 22px;
+      box-shadow:0 8px 18px rgba(212,175,55,.25);transition:.2s;cursor:pointer
+    }
+    .btn:hover{background:var(--gold-2);transform:translateY(-1px)}
+    .btn:focus-visible, a:focus-visible{outline:3px solid var(--gold); outline-offset:3px}
+    .btn svg{width:22px;height:22px}
+    .tag{
+      display:inline-flex;align-items:center;gap:.4rem;
+      background:linear-gradient(180deg, rgba(212,175,55,.14), rgba(212,175,55,.06));
+      border:1px solid rgba(212,175,55,.3);padding:8px 12px;border-radius:999px;
+      color:#f2f2f2;font-weight:600;font-size:.85rem
+    }
+    small.muted{color:var(--muted);display:block;margin-top:6px}
+
+    /* HERO */
+    header.hero{
+      position:relative;isolation:isolate;overflow:hidden;
+      background:
+        radial-gradient(1000px 600px at -10% -10%, rgba(212,175,55,.12), transparent 50%),
+        radial-gradient(800px 500px at 110% -20%, rgba(212,175,55,.10), transparent 55%),
+        var(--black);
+    }
+    .hero-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:60px 0}
+    .hero-media{
+      position:relative;border-radius:var(--radius);overflow:hidden;background:#0f0f0f;
+      border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow)
+    }
+    .hero-media .bg{
+      position:absolute;inset:0;background-size:cover;background-position:center;
+      /* Usa image-set para elegir el mejor formato disponible */
+      background-image: image-set(
+        url('assets/img/hero-business-1600.avif') type('image/avif'),
+        url('assets/img/hero-business-1600.webp') type('image/webp'),
+        url('assets/img/hero-business-1600.jpg') type('image/jpeg')
+      );
+      filter:brightness(.5) saturate(1.1)
+    }
+    .hero-media .overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.6))}
+    .hero-card{
+      position:relative;z-index:2;padding:22px;border-radius:12px;margin:18px;
+      background:rgba(255,255,255,.06);backdrop-filter: blur(6px);
+      border:1px solid rgba(255,255,255,.12);color:#efefef
+    }
+    .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+    .video-slot{
+      width:100%;aspect-ratio:16/9;border-radius:12px;border:2px dashed rgba(255,255,255,.18);
+      display:grid;place-items:center;color:#bdbdbd;font-weight:600;background:rgba(255,255,255,.04)
+    }
+
+    /* SECTIONS */
+    section{padding:64px 0}
+    .grid{display:grid;gap:18px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    @media (max-width: 920px){
+      .hero-wrap{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      header.hero{padding-top:10px}
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:22px;
+      box-shadow:var(--shadow);transition:.2s;position:relative;overflow:hidden
+    }
+    .card:hover{transform:translateY(-2px)}
+    .card .icon{
+      width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+      background:linear-gradient(180deg, rgba(212,175,55,.22), rgba(212,175,55,.06));
+      border:1px solid rgba(212,175,55,.35);margin-bottom:12px
+    }
+    .muted{color:var(--muted)}
+    .accent{color:var(--gold)}
+    .divider{height:1px;background:linear-gradient(90deg, transparent, rgba(212,175,55,.45), transparent);margin:26px 0}
+    .testi{display:grid;gap:18px}
+    .testi .t{display:flex;gap:14px;align-items:flex-start}
+    .avatar{
+      width:46px;height:46px;border-radius:50%;
+      background:linear-gradient(180deg, rgba(212,175,55,.35), rgba(212,175,55,.08));
+      border:1px solid rgba(212,175,55,.35);display:grid;place-items:center;font-weight:800;color:#111
+    }
+    blockquote{margin:0;color:#eaeaea}
+    details{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:16px;margin-bottom:12px}
+    summary{cursor:pointer;font-weight:700}
+
+    .cta-final{
+      background:
+        radial-gradient(900px 500px at 10% -10%, rgba(212,175,55,.15), transparent 60%),
+        radial-gradient(700px 400px at 100% 0%, rgba(212,175,55,.10), transparent 60%),
+        var(--dark);
+      text-align:center
+    }
+    .float-wa{
+      position:fixed;right:16px;bottom:18px;z-index:50;display:inline-flex;align-items:center;gap:.55rem;padding:12px 16px;border-radius:999px;
+      background:var(--gold);color:#111;font-weight:800;box-shadow:0 12px 24px rgba(212,175,55,.35)
+    }
+    .float-wa:hover{background:var(--gold-2)}
+    .mb-8{margin-bottom:8px}.mb-12{margin-bottom:12px}.mb-16{margin-bottom:16px}.mb-20{margin-bottom:20px}.mb-28{margin-bottom:28px}
+    .mt-16{margin-top:16px}.mt-24{margin-top:24px}.center{text-align:center}
+
+    footer{padding:28px 0;color:#9a9a9a;font-size:.85rem}
+    footer .container{display:flex;justify-content:center}
+  </style>
+
+  <!-- Schema.org (ProfessionalService) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ProfessionalService",
+    "name":"Braulin Fernando Betancourt — Arquitectura NEXO de Compradores",
+    "description":"Configuración llave en mano de Meta Ads + WhatsApp: BM verificado, 3 campañas listas, prevención de bloqueos y 12 meses de IA Pro. Especial para emprendedores y negocios locales.",
+    "areaServed":["VE","CO","PE","EC"],
+    "founder":"Braulin Fernando Betancourt",
+    "foundingDate":"2017",
+    "serviceType":["Meta Ads","WhatsApp Conversion","Creativos con IA"],
+    "url":"https://TU-USUARIO.github.io/TU-REPO/",
+    "image":"https://TU-USUARIO.github.io/TU-REPO/assets/img/og-cover.jpg"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero" aria-label="Encabezado principal">
+    <div class="container hero-wrap">
+      <div>
+        <div class="eyebrow">Braulin Fernando Betancourt</div>
+        <h1 class="h1">Arquitectura <span class="accent">NEXO</span> de Compradores</h1>
+        <p class="lead">
+          Clientes por WhatsApp de forma <strong>predecible</strong> con Meta Ads: BM verificado, <strong>3 campañas listas</strong> y prevención de <strong>bloqueos</strong>, más <strong>12 meses de IA Pro</strong> para creativos. Especial para <strong>emprendedores y negocios locales</strong>.
+        </p>
+
+        <div class="hero-cta">
+          <a
+            class="btn"
+            aria-label="Hablar por WhatsApp"
+            href="https://wa.me/573148676490?text=QUIERO%20MI%20SISTEMA%20%7C%20origen%3Ahero"
+            target="_blank" rel="noopener"
+          >
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2C6.5 2 2 6.2 2 11.5c0 1.9.6 3.7 1.6 5.2L2 22l5.5-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.2 10-9.3C22.3 6.2 17.7 2 12 2Z" fill="#25D366"/>
+            </svg>
+            💬 Hablar por WhatsApp
+          </a>
+          <span class="tag">Respuesta directa • Sin formularios</span>
+          <small class="muted">👉 Te respondo personalmente.</small>
+        </div>
+      </div>
+
+      <!-- Visual con video opcional -->
+      <div class="hero-media" aria-label="Presentación visual">
+        <div class="bg" role="img" aria-label="Emprendedores trabajando con marketing digital"></div>
+        <div class="overlay"></div>
+        <div class="hero-card">
+          <div class="video-slot">Espacio para tu video de venta (embed)</div>
+          <p class="muted mt-16 mb-8">Un video de 45–90s aumenta la conexión y la confianza. Explica <em>qué</em> haces y muestra <em>resultados</em>.</p>
+          <div class="divider"></div>
+          <div class="tag">Mobile-first • Sin menú • Sin distracciones</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- DOLOR -->
+    <section aria-labelledby="dolor">
+      <div class="container">
+        <div class="center mb-20">
+          <div class="eyebrow" id="dolor">¿Te suena familiar?</div>
+          <h2 class="h1" style="font-size:clamp(1.5rem,3.5vw,2.2rem)">Si tu marketing no funciona, <span class="accent">estás perdiendo ventas</span></h2>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l1.6 4.6L18 8l-4.4 1.4L12 14l-1.6-4.6L6 8l4.4-1.4L12 2Z" fill="url(#g1)"/><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D4AF37"/><stop offset="1" stop-color="#aa8b26"/></linearGradient></defs></svg>
+            </div>
+            <h3>“Botón Promocionar” que ya no rinde</h3>
+            <p class="muted">Al inicio funciona, luego se estanca. Sin estrategia real, gastas sin un retorno claro.</p>
+          </div>
+          <div class="card">
+            <div class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 5.5-3.8 8.9-7 10-3.2-1.1-7-4.5-7-10V6l7-3Z" fill="url(#g2)"/><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D4AF37"/><stop offset="1" stop-color="#7f6a20"/></linearGradient></defs></svg>
+            </div>
+            <h3>Bloqueos, pagos y cuentas suspendidas</h3>
+            <p class="muted">Errores de Meta o malas prácticas te frenan. A veces ni puedes crear cuenta publicitaria o pagar.</p>
+          </div>
+          <div class="card">
+            <div class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#D4AF37" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="#D4AF37" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="#D4AF37"/></svg>
+            </div>
+            <h3>Sin sistema • Solo “intentos”</h3>
+            <p class="muted">No hay flujo a WhatsApp ni seguimiento. Cada mes es una incertidumbre para conseguir clientes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUCIÓN -->
+    <section aria-labelledby="solucion">
+      <div class="container">
+        <div class="center mb-20">
+          <div class="eyebrow" id="solucion">La solución</div>
+          <h2 class="h1" style="font-size:clamp(1.5rem,3.5vw,2.2rem)"><span class="accent">Arquitectura NEXO</span> de Compradores — lista para usar</h2>
+          <p class="muted">Yo lo configuro. Tú solo atiendes mensajes y vendes. Así de simple.</p>
+        </div>
+
+        <!-- Reordenado: Configuración → WhatsApp → Campañas → Prevención → Creativos IA → Medición -->
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 7.5a5.5 5.5 0 0 1-7.5 7L6.7 21.3a1.5 1.5 0 0 1-2.1-2.1L11.4 12A5.5 5.5 0 1 1 21 7.5Z" fill="url(#g3)"/><defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D4AF37"/><stop offset="1" stop-color="#a48828"/></linearGradient></defs></svg>
+            </div>
+            <h3>Configuración Pro en Meta</h3>
+            <p class="muted">Business Manager, cuentas publicitarias, páginas, Instagram y método de pago — todo conectado y verificado.</p>
+          </div>
+          <div class="card">
+            <div class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v10H7l-3 3V5Z" fill="url(#g5)"/><defs><linearGradient id="g5" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D4AF37"/><stop offset="1" stop-color="#886c1a"/></linearGradient></defs></svg>
+            </div>
+            <h3>Proceso de ventas en WhatsApp</h3>
+            <p class="muted">Guiones, respuestas rápidas, etiquetas y seguimiento para cerrar ventas sin perder tiempo.</p>
+          </div>
+          <div class="card">
+            <div class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 2c3 1 5 3 6 6-3 1-6 4-8 7-3 2-6 3-8 3 0-2 1-5 3-8 3-2 6-5 7-8Z" fill="url(#g4)"/><path d="M6 14l4 4" stroke="#fff" stroke-opacity=".8"/></svg>
+            </div>
+            <h3>Campañas que convierten</h3>
+            <p class="muted">Anuncios en Facebook/Instagram con IA de Meta, segmentación correcta y mensajes directos a WhatsApp.</p>
+          </div>
+          <div class="card">
+            <div class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 5.5-3.8 8.9-7 10-3.2-1.1-7-4.5-7-10V6l7-3Z" fill="rgba(212,175,55,.3)"/><path d="M9 12l2 2 4-4" stroke="#111" stroke-width="2" /><path d="M9 12l2 2 4-4" stroke="#fff" stroke-opacity=".85" stroke-width="2"/></svg>
+            </div>
+            <h3>Prevención de bloqueos</h3>
+            <p class="muted">Políticas, estructura correcta y buenas prácticas para minimizar suspensiones. Si pasa, te ayudo a recuperarla.</p>
+          </div>
+          <div class="card">
+            <div class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="10" width="18" height="4" rx="2" fill="url(#g6)"/><path d="M6 6l2 2M16 16l2 2M14 5l1 1M8 18l1 1" stroke="#D4AF37" stroke-width="2"/></svg>
+            </div>
+            <h3>Creativos & plantillas con IA</h3>
+            <p class="muted">Piezas listas (video, imagen, carrusel) + guiones para que puedas replicar campañas sin depender de nadie.</p>
+          </div>
+          <div class="card">
+            <div class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 18V6M10 18V10M16 18V8M22 18H2" stroke="#D4AF37" stroke-width="2"/></svg>
+            </div>
+            <h3>Medición clara del retorno</h3>
+            <p class="muted">Costo por mensaje, frecuencia, segmentación y optimizaciones que muestran cómo la inversión se paga sola.</p>
+          </div>
+        </div>
+
+        <!-- Caja de entregables (claridad de valor) -->
+        <div class="grid mt-24" style="grid-template-columns:1fr">
+          <div class="card">
+            <h3>Qué recibes (llave en mano)</h3>
+            <ul class="muted" style="margin:0;padding-left:18px">
+              <li>BM verificado + cuenta publicitaria + método de pago</li>
+              <li>3 campañas listas (objetivos, copies y creativos guía)</li>
+              <li>Flujo a WhatsApp con guion, respuestas rápidas y etiquetas</li>
+              <li>Checklist de políticas + lista de palabras de riesgo</li>
+              <li>12 meses de IA Pro (Gemini, iStudio, Flow)</li>
+              <li>Mini‑manual: replicar campañas desde el teléfono</li>
+              <li>Soporte ante bloqueos, appeals y problemas de pago</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUEOS / SUSPENSIONES -->
+    <section aria-labelledby="bloqueos">
+      <div class="container">
+        <div class="grid grid-2">
+          <div>
+            <div class="eyebrow" id="bloqueos">¿Problemas con Meta?</div>
+            <h2 class="h1" style="font-size:clamp(1.4rem,3.2vw,2rem)">Cuentas bloqueadas, pagos rechazados, verificación… <span class="accent">yo me encargo</span></h2>
+            <p class="muted">Nadie está exento. Por errores del sistema o malas prácticas, Meta puede inhabilitar activos. Parte de mi servicio es <strong>prevenir</strong> y, si sucede, <strong>resolver</strong>: apelaciones, revisiones, estructura segura y métodos de pago que funcionen en tu país.</p>
+            <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+              <div class="card"><strong>Setup blindado</strong><br><span class="muted">BM verificado, dominios/activos bien vinculados</span></div>
+              <div class="card"><strong>Métodos de pago</strong><br><span class="muted">Alternativas y configuración correcta</span></div>
+              <div class="card"><strong>Políticas Meta</strong><br><span class="muted">Copys/creativos que cumplen normas</span></div>
+              <div class="card"><strong>Appeals</strong><br><span class="muted">Acompañamiento en solicitudes y soporte</span></div>
+            </div>
+            <div class="mt-24">
+              <a class="btn"
+                 href="https://wa.me/573148676490?text=QUIERO%20MI%20SISTEMA%20%7C%20origen%3Abloqueos"
+                 target="_blank" rel="noopener" aria-label="Ayuda con bloqueos por WhatsApp">
+                Solicitar ayuda ahora
+              </a>
+              <small class="muted">Sujeto a políticas de Meta. Resultados variables según nicho y presupuesto.</small>
+            </div>
+          </div>
+          <div style="display:grid;gap:12px">
+            <!-- Imágenes locales con <picture> y lazy -->
+            <picture>
+              <source type="image/avif" srcset="assets/img/office-team-1200.avif 1200w, assets/img/office-team-800.avif 800w" sizes="(max-width: 920px) 100vw, 50vw" />
+              <source type="image/webp" srcset="assets/img/office-team-1200.webp 1200w, assets/img/office-team-800.webp 800w" sizes="(max-width: 920px) 100vw, 50vw" />
+              <img src="assets/img/office-team-1200.jpg" alt="Panel de marketing y equipo trabajando" width="1200" height="800" loading="lazy" decoding="async" style="border-radius:14px;border:1px solid rgba(255,255,255,.12)" />
+            </picture>
+            <picture>
+              <source type="image/avif" srcset="assets/img/local-shop-1200.avif 1200w, assets/img/local-shop-800.avif 800w" sizes="(max-width: 920px) 100vw, 50vw" />
+              <source type="image/webp" srcset="assets/img/local-shop-1200.webp 1200w, assets/img/local-shop-800.webp 800w" sizes="(max-width: 920px) 100vw, 50vw" />
+              <img src="assets/img/local-shop-1200.jpg" alt="Pequeño negocio atendiendo clientes" width="1200" height="800" loading="lazy" decoding="async" style="border-radius:14px;border:1px solid rgba(255,255,255,.12)" />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section aria-labelledby="beneficios">
+      <div class="container">
+        <div class="center mb-20">
+          <div class="eyebrow" id="beneficios">Lo que vas a notar</div>
+          <h2 class="h1" style="font-size:clamp(1.4rem,3.2vw,2rem)">Resultados que se sienten en la caja</h2>
+        </div>
+        <div class="grid grid-3">
+          <div class="card"><h3>Más mensajes diarios</h3><p class="muted">Personas que sí quieren comprar, escribiéndote directo al WhatsApp.</p></div>
+          <div class="card"><h3>Retorno que paga la inversión</h3><p class="muted">Tu inversión publicitaria se recupera con ventas reales y medibles.</p></div>
+          <div class="card"><h3>Tranquilidad y foco</h3><p class="muted">Con un sistema montado, te concentras en atender y crecer.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section aria-labelledby="testimonios">
+      <div class="container">
+        <div class="center mb-20">
+          <div class="eyebrow" id="testimonios">Prueba social</div>
+          <h2 class="h1" style="font-size:clamp(1.4rem,3.2vw,2rem)">Dueños de negocio como tú ya lo están logrando</h2>
+        </div>
+        <div class="testi grid grid-3">
+          <div class="card">
+            <div class="t">
+              <div class="avatar">A</div>
+              <div>
+                <strong>Andrea · Tienda de Accesorios</strong>
+                <blockquote>“Pasé de 0 mensajes a consultas diarias. Por fin mis anuncios se pagan solos. En 6 semanas duplicamos ventas.”</blockquote>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="t">
+              <div class="avatar">J</div>
+              <div>
+                <strong>José · Servicios Técnicos</strong>
+                <blockquote>“Tenía la cuenta bloqueada. Braulin me la recuperó y montó campañas que hoy me dan trabajo cada semana.”</blockquote>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="t">
+              <div class="avatar">M</div>
+              <div>
+                <strong>María · Estudio de Belleza</strong>
+                <blockquote>“No sabía de anuncios y me daba miedo gastar. El sistema es claro y ahora vivo agendada.”</blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section aria-labelledby="sobre">
+      <div class="container">
+        <div class="grid grid-2" style="align-items:center">
+          <div>
+            <div class="eyebrow" id="sobre">Sobre mí</div>
+            <h2 class="h1" style="font-size:clamp(1.4rem,3.2vw,2rem)">Braulin Fernando Betancourt</h2>
+            <p class="muted">Desde 2017 he gestionado <strong>$40.000+</strong> en campañas de Facebook e Instagram para mis marcas y clientes, trabajando desde Venezuela para Latinoamérica. Mi trabajo es que tu publicidad sea <em>rentable</em> y tu WhatsApp no pare de sonar.</p>
+            <div class="tag">Meta Ads Manager • WhatsApp Conversion • AI Content</div>
+            <div class="mt-16 muted">Atiendo VE, CO, PE y EC</div>
+          </div>
+          <div>
+            <picture>
+              <source type="image/avif" srcset="assets/img/braulin-betancourt-800.avif 800w, assets/img/braulin-betancourt-1200.avif 1200w" sizes="(max-width: 920px) 100vw, 50vw" />
+              <source type="image/webp" srcset="assets/img/braulin-betancourt-800.webp 800w, assets/img/braulin-betancourt-1200.webp 1200w" sizes="(max-width: 920px) 100vw, 50vw" />
+              <img src="assets/img/braulin-betancourt-1200.png" alt="Braulin Fernando Betancourt" width="1200" height="1500" loading="lazy" decoding="async" style="border-radius:14px;border:1px solid rgba(255,255,255,.12);object-fit:cover" />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section aria-labelledby="faq">
+      <div class="container">
+        <div class="center mb-20">
+          <div class="eyebrow" id="faq">Preguntas frecuentes</div>
+          <h2 class="h1" style="font-size:clamp(1.4rem,3.2vw,2rem)">Lo esencial, sin vueltas</h2>
+        </div>
+        <details>
+          <summary>¿Necesito tener página web?</summary>
+          <p class="muted">No es obligatorio. Podemos dirigir del anuncio a WhatsApp o a una landing simple. Lo decidimos según tu caso.</p>
+        </details>
+        <details>
+          <summary>¿Qué pasa si Meta bloquea mi cuenta?</summary>
+          <p class="muted">Trabajo con estructura segura y políticas. Si ocurre, te acompaño en el proceso de recuperación y ajustes necesarios.</p>
+        </details>
+        <details>
+          <summary>¿Debo saber de marketing?</summary>
+          <p class="muted">No. Es llave en mano. Te entrego todo montado y te doy una inducción sencilla para operar y replicar.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final" aria-labelledby="cta">
+      <div class="container">
+        <div class="center">
+          <div class="eyebrow" id="cta">Acción</div>
+          <h2 class="h1" style="font-size:clamp(1.6rem,3.6vw,2.3rem)">¿Listo para activar tu <span class="accent">Arquitectura NEXO</span>?</h2>
+          <p class="lead">Escríbeme ahora y te muestro cómo aplicarlo en tu negocio. <strong>Sin estrés. Sin tecnicismos. Con resultados.</strong></p>
+          <div class="mt-16">
+            <a class="btn"
+               href="https://wa.me/573148676490?text=QUIERO%20MI%20SISTEMA%20%7C%20origen%3Acta-final"
+               target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+              💬 Hablar por WhatsApp
+            </a>
+            <small class="muted">👉 Te respondo personalmente.</small>
+          </div>
+          <p class="muted mt-16">Atiendo Venezuela, Colombia, Perú y Ecuador.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a class="float-wa" href="https://wa.me/573148676490?text=QUIERO%20MI%20SISTEMA%20%7C%20origen%3Afloating" target="_blank" rel="noopener" aria-label="WhatsApp rápido">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2C6.5 2 2 6.2 2 11.5c0 1.9.6 3.7 1.6 5.2L2 22l5.5-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.2 10-9.3C22.3 6.2 17.7 2 12 2Z" fill="#25D366"/></svg>
+    WhatsApp
+  </a>
+
+  <!-- FOOTER / DISCLAIMER -->
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> Braulin Fernando Betancourt. No afiliado a Meta. Resultados variables según nicho y presupuesto. Cumplir políticas de anuncios.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
