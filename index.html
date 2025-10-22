@@ -16,7 +16,6 @@
   <meta property="og:site_name" content="Braulin Fernando Betancourt" />
   <meta property="og:title" content="Arquitectura NEXO de Compradores — Clientes por WhatsApp con Meta Ads" />
   <meta property="og:description" content="BM verificado, 3 campañas listas, prevención de bloqueos y 12 meses de IA Pro. De anuncio a chat, sin fricción." />
-  <!-- Usamos por ahora el hero como OG; si luego subes og-cover.jpg cámbialo aquí -->
   <meta property="og:image" content="https://braulinfb.github.io/sistemanexo/assets/img/hero-business-1600.webp" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -145,7 +144,28 @@
     footer{padding:28px 0;color:#9a9a9a;font-size:.85rem}
     footer .container{display:flex;justify-content:center}
 
-    /* Respeta preferencias del usuario (accesibilidad) */
+    /* Galería horizontal en móvil (mejora UX) */
+    .media-scroller{
+      display:grid; gap:12px; overflow:visible;
+    }
+    @media (max-width:920px){
+      .media-scroller{
+        overflow-x:auto;
+        grid-auto-flow:column;
+        grid-auto-columns:85%;
+        scroll-snap-type:x mandatory;
+        overscroll-behavior-x:contain;
+        padding-bottom:8px;
+      }
+      .media-card{scroll-snap-align:start}
+      .swipe-hint{display:block}
+    }
+    .media-card{
+      border-radius:14px;border:1px solid rgba(255,255,255,.12);overflow:hidden
+    }
+    .swipe-hint{display:none;color:var(--muted);font-size:.85rem;margin-top:6px}
+
+    /* Accesibilidad: respeta preferencias */
     @media (prefers-reduced-motion: reduce){
       *{transition:none !important; scroll-behavior:auto !important}
     }
@@ -183,7 +203,8 @@
           <a
             class="btn"
             aria-label="Hablar por WhatsApp"
-            href="https://wa.me/573148676490?text=QUIERO%20MI%20SISTEMA%20%7C%20origen%3Ahero"
+            href="https://wa.me/573148676490?text=QUIERO%20MI%20SISTEMA"
+            data-wa-origin="hero"
             target="_blank" rel="noopener"
           >
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -335,16 +356,25 @@
             </div>
             <div class="mt-24">
               <a class="btn"
-                 href="https://wa.me/573148676490?text=QUIERO%20MI%20SISTEMA%20%7C%20origen%3Abloqueos"
+                 href="https://wa.me/573148676490?text=QUIERO%20MI%20SISTEMA"
+                 data-wa-origin="bloqueos"
                  target="_blank" rel="noopener" aria-label="Ayuda con bloqueos por WhatsApp">
                 Solicitar ayuda ahora
               </a>
               <small class="muted">Sujeto a políticas de Meta. Resultados variables según nicho y presupuesto.</small>
             </div>
           </div>
-          <div style="display:grid;gap:12px">
-            <img src="assets/img/office-team-1200.webp" alt="Panel de marketing y equipo trabajando" width="1200" height="800" loading="lazy" decoding="async" style="border-radius:14px;border:1px solid rgba(255,255,255,.12)" />
-            <img src="assets/img/local-shop-1200.webp" alt="Pequeño negocio atendiendo clientes" width="1200" height="800" loading="lazy" decoding="async" style="border-radius:14px;border:1px solid rgba(255,255,255,.12)" />
+          <!-- Galería horizontal en móvil -->
+          <div>
+            <div class="media-scroller" aria-label="Galería de ejemplos">
+              <div class="media-card">
+                <img src="assets/img/office-team-1200.webp" alt="Panel de marketing y equipo trabajando" width="1200" height="800" loading="lazy" decoding="async" />
+              </div>
+              <div class="media-card">
+                <img src="assets/img/local-shop-1200.webp" alt="Pequeño negocio atendiendo clientes" width="1200" height="800" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="swipe-hint">Desliza para ver más →</div>
           </div>
         </div>
       </div>
@@ -453,7 +483,8 @@
           <p class="lead">Escríbeme ahora y te muestro cómo aplicarlo en tu negocio. <strong>Sin estrés. Sin tecnicismos. Con resultados.</strong></p>
           <div class="mt-16">
             <a class="btn"
-               href="https://wa.me/573148676490?text=QUIERO%20MI%20SISTEMA%20%7C%20origen%3Acta-final"
+               href="https://wa.me/573148676490?text=QUIERO%20MI%20SISTEMA"
+               data-wa-origin="cta-final"
                target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
               💬 Hablar por WhatsApp
             </a>
@@ -467,7 +498,7 @@
   </main>
 
   <!-- BOTÓN FLOTANTE WHATSAPP -->
-  <a class="float-wa" href="https://wa.me/573148676490?text=QUIERO%20MI%20SISTEMA%20%7C%20origen%3Afloating" target="_blank" rel="noopener" aria-label="WhatsApp rápido">
+  <a class="float-wa" href="https://wa.me/573148676490?text=QUIERO%20MI%20SISTEMA" data-wa-origin="floating" target="_blank" rel="noopener" aria-label="WhatsApp rápido">
     <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2C6.5 2 2 6.2 2 11.5c0 1.9.6 3.7 1.6 5.2L2 22l5.5-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.2 10-9.3C22.3 6.2 17.7 2 12 2Z" fill="#25D366"/></svg>
     WhatsApp
   </a>
@@ -482,6 +513,29 @@
   <script>
     // Año dinámico
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ---- Tracking de clics a WhatsApp SIN mostrar "origen" en el mensaje ----
+    // Coloca tu ID de GA4 en GA_ID (p.ej. 'G-ABCD1234'). Si lo dejas vacío, no se cargará GA.
+    (function(){
+      const GA_ID = ''; // <-- pega aquí tu Measurement ID de GA4 si lo usas
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      if (GA_ID){
+        const s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id='+GA_ID;
+        document.head.appendChild(s);
+        gtag('js', new Date()); gtag('config', GA_ID);
+      }
+      document.addEventListener('click', function(e){
+        const a = e.target.closest('a[data-wa-origin]');
+        if(!a) return;
+        const origin = a.getAttribute('data-wa-origin');
+        if (GA_ID){ gtag('event','wa_click',{origin: origin}); }
+        // Nota: si no usas GA, igual puedes ver el origen temporalmente en consola:
+        if (!GA_ID){ console.log('WA click:', origin); }
+      }, {passive:true});
+    })();
   </script>
 
 </body>
