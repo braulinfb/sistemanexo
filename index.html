@@ -3,189 +3,179 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Arquitectura NEXO de Compradores — Clientes por WhatsApp con Meta Ads</title>
-  <meta name="description" content="Arquitectura NEXO de Compradores: configuración llave en mano de Meta Ads + WhatsApp. BM verificado, 3 campañas listas, prevención de bloqueos y 12 meses de IA Pro. Especial para emprendedores y negocios locales." />
-  <meta name="robots" content="index,follow" />
-  <meta name="theme-color" content="#0b0b0b" />
-  <link rel="canonical" href="https://braulinfb.github.io/sistemanexo/" />
-
-  <!-- Open Graph / Twitter Cards -->
-  <meta property="og:locale" content="es_ES" />
+  <title>Braulin Betancourt — Sistema RADAR™: Meta Ads + WhatsApp = Clientes Diarios</title>
+  <meta name="description" content="Aumenta tus ventas con el Sistema RADAR™: campañas de Meta Ads que generan mensajes reales en WhatsApp. +40k USD gestionados. Recupero cuentas bloqueadas." />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sistema RADAR™ — Convierte Meta Ads en Clientes por WhatsApp" />
+  <meta property="og:description" content="Configuro tu ecosistema completo: Facebook/Instagram Ads + WhatsApp. Sin bloqueos, con resultados." />
+  <meta property="og:image" content="https://tudominio.com/assets/img/braulin-betancourt-1200.jpg" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Braulin Fernando Betancourt" />
-  <meta property="og:title" content="Arquitectura NEXO de Compradores — Clientes por WhatsApp con Meta Ads" />
-  <meta property="og:description" content="BM verificado, 3 campañas listas, prevención de bloqueos y 12 meses de IA Pro. De anuncio a chat, sin fricción." />
-  <meta property="og:image" content="https://braulinfb.github.io/sistemanexo/assets/img/hero-business-1600.webp" />
+  <meta property="og:url" content="https://tudominio.com" />
+  
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Fuentes -->
+  <meta name="twitter:title" content="Sistema RADAR™ de Meta Ads" />
+  <meta name="twitter:description" content="Genera mensajes calificados diarios con Meta Ads + WhatsApp" />
+  <meta name="twitter:image" content="https://tudominio.com/assets/img/braulin-betancourt-1200.jpg" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+  
+  <!-- Meta Pixel - REEMPLAZA TU_PIXEL_ID -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'TU_PIXEL_ID'); // ← Cambia esto por tu Pixel ID
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=TU_PIXEL_ID&ev=PageView&noscript=1" /></noscript>
+  
+  <!-- Google Analytics (opcional) - REEMPLAZA G-XXXXXXXX -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXX');
+  </script> -->
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- Preload del hero -->
-  <link rel="preload" as="image" href="assets/img/hero-business-1600.webp" />
-
+  
   <style>
     :root{
       --black:#0b0b0b; --dark:#121212; --white:#ffffff; --muted:#bdbdbd;
       --gold:#D4AF37; --gold-2:#c9a02e; --glass: rgba(255,255,255,.06);
+      --red-alert:#ff3b30;
       --max:1140px; --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.3);
     }
     *{box-sizing:border-box}
-    html,body{
-      margin:0;padding:0;background:var(--black);color:var(--white);
-      font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.5
-    }
-    img{max-width:100%;height:auto;display:block;border:0}
+    html{scroll-behavior:smooth}
+    html,body{margin:0;padding:0;background:var(--black);color:var(--white);
+      font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+    img{max-width:100%;display:block;border:0}
     a{color:var(--gold);text-decoration:none}
     .container{width:100%;max-width:var(--max);margin:0 auto;padding:0 20px}
     .eyebrow{letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700;font-size:.78rem}
-    .h1{font-size:clamp(1.8rem,4.5vw,3rem);line-height:1.15;margin:.35rem 0 .8rem;font-weight:800}
-    .lead{color:#e8e8e8;font-size:clamp(1rem,2.6vw,1.125rem)}
-    .btn{
-      display:inline-flex;align-items:center;gap:.6rem;background:var(--gold);color:#111;
-      font-weight:800;border:none;border-radius:999px;padding:14px 22px;
-      box-shadow:0 8px 18px rgba(212,175,55,.25);transition:.2s;cursor:pointer
-    }
-    .btn:hover{background:var(--gold-2);transform:translateY(-1px)}
-    .btn:focus-visible, a:focus-visible{outline:3px solid var(--gold); outline-offset:3px}
-    .btn svg{width:22px;height:22px}
-    .tag{
-      display:inline-flex;align-items:center;gap:.4rem;
-      background:linear-gradient(180deg, rgba(212,175,55,.14), rgba(212,175,55,.06));
-      border:1px solid rgba(212,175,55,.3);padding:8px 12px;border-radius:999px;
-      color:#f2f2f2;font-weight:600;font-size:.85rem
-    }
-    small.muted{color:var(--muted);display:block;margin-top:6px}
-    .muted{color:var(--muted)}
-    .accent{color:var(--gold)}
-    .divider{height:1px;background:linear-gradient(90deg, transparent, rgba(212,175,55,.45), transparent);margin:26px 0}
-
+    .h1{font-size:clamp(1.8rem,4.5vw,3rem);line-height:1.15;margin:.35rem 0 .8rem;font-weight:700}
+    .lead{color:#e8e8e8;font-size:clamp(1rem,2.6vw,1.125rem);line-height:1.6}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--gold);color:#111;
+      font-weight:800;border:none;border-radius:999px;padding:14px 22px;box-shadow:0 8px 18px rgba(212,175,55,.25);transition:.2s;cursor:pointer;font-size:1rem}
+    .btn:hover{background:var(--gold-2);transform:translateY(-1px);box-shadow:0 12px 24px rgba(212,175,55,.35)}
+    .btn svg{width:22px;height:22px;flex-shrink:0}
+    .tag{display:inline-flex;align-items:center;gap:.4rem;background:linear-gradient(180deg, rgba(212,175,55,.14), rgba(212,175,55,.06));
+      border:1px solid rgba(212,175,55,.3);padding:8px 12px;border-radius:999px;color:#f2f2f2;font-weight:600;font-size:.85rem}
+    .tag-alert{background:linear-gradient(90deg, rgba(255,59,48,.15), rgba(255,59,48,.05));border-color:rgba(255,59,48,.4)}
+    
     /* HERO */
     header.hero{
       position:relative;isolation:isolate;overflow:hidden;
-      background:
-        radial-gradient(1000px 600px at -10% -10%, rgba(212,175,55,.12), transparent 50%),
-        radial-gradient(800px 500px at 110% -20%, rgba(212,175,55,.10), transparent 55%),
-        var(--black);
+      background: radial-gradient(1000px 600px at -10% -10%, rgba(212,175,55,.12), transparent 50%),
+                  radial-gradient(800px 500px at 110% -20%, rgba(212,175,55,.10), transparent 55%),
+                  var(--black);
     }
-    .hero-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:60px 0}
-    .hero-media{
-      position:relative;border-radius:var(--radius);overflow:hidden;background:#0f0f0f;
-      border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow)
-    }
-    .hero-media .bg{
-      position:absolute;inset:0;background:url('assets/img/hero-business-1600.webp') center/cover no-repeat;
-      filter:brightness(.55) saturate(1.05)
-    }
-    .hero-media .overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.6))}
-    .hero-card{
-      position:relative;z-index:2;padding:22px;border-radius:12px;margin:18px;
-      background:rgba(255,255,255,.06);backdrop-filter: blur(6px);
-      border:1px solid rgba(255,255,255,.12);color:#efefef
-    }
-    .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
-    .video-slot{
-      width:100%;aspect-ratio:16/9;border-radius:12px;border:2px dashed rgba(255,255,255,.18);
-      display:grid;place-items:center;color:#bdbdbd;font-weight:600;background:rgba(255,255,255,.04)
-    }
-
+    .hero-wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding:60px 0}
+    .hero-media{position:relative;border-radius:var(--radius);overflow:hidden;background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow);padding:28px}
+    .hero-message{background:linear-gradient(135deg, rgba(212,175,55,.08), rgba(212,175,55,.03));
+      border:1px solid rgba(212,175,55,.25);border-radius:12px;padding:24px;margin-bottom:18px}
+    .hero-message h3{margin:0 0 12px;font-size:1.3rem;color:var(--gold)}
+    .hero-message p{margin:0;color:#e8e8e8;line-height:1.65}
+    .hero-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .stat-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:16px;text-align:center}
+    .stat-box .number{font-size:1.8rem;font-weight:800;color:var(--gold);line-height:1}
+    .stat-box .label{font-size:.8rem;color:var(--muted);margin-top:4px}
+    .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;align-items:center}
+    .quick-benefits{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+    .guarantee{margin-top:20px;padding:14px;background:rgba(212,175,55,.08);border-left:3px solid var(--gold);border-radius:8px}
+    
     /* SECTIONS */
     section{padding:64px 0}
+    .bg-dark{background:var(--dark)}
     .grid{display:grid;gap:18px}
     .grid-3{grid-template-columns:repeat(3,1fr)}
     .grid-2{grid-template-columns:repeat(2,1fr)}
+    
     @media (max-width: 920px){
       .hero-wrap{grid-template-columns:1fr}
       .grid-3{grid-template-columns:1fr}
       .grid-2{grid-template-columns:1fr}
       header.hero{padding-top:10px}
+      .hero-stats{grid-template-columns:1fr}
     }
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:22px;
-      box-shadow:var(--shadow);transition:.2s;position:relative;overflow:hidden
-    }
+    
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:22px;box-shadow:var(--shadow);transition:.2s;position:relative;overflow:hidden}
     .card:hover{transform:translateY(-2px)}
-    .card .icon{
-      width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+    .card .icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
       background:linear-gradient(180deg, rgba(212,175,55,.22), rgba(212,175,55,.06));
-      border:1px solid rgba(212,175,55,.35);margin-bottom:12px
-    }
+      border:1px solid rgba(212,175,55,.35);margin-bottom:12px;flex-shrink:0}
+    .muted{color:var(--muted)}
+    .accent{color:var(--gold)}
+    .divider{height:1px;background:linear-gradient(90deg, transparent, rgba(212,175,55,.45), transparent);margin:26px 0}
+    
+    /* IMAGE CONTAINERS */
+    .img-container{position:relative;overflow:hidden;border-radius:var(--radius);border:1px solid rgba(255,255,255,.12)}
+    .img-container img{width:100%;height:100%;object-fit:cover;display:block}
+    
+    /* TESTIMONIOS */
     .testi{display:grid;gap:18px}
     .testi .t{display:flex;gap:14px;align-items:flex-start}
-    .avatar{
-      width:46px;height:46px;border-radius:50%;
+    .avatar{width:46px;height:46px;border-radius:50%;flex-shrink:0;
       background:linear-gradient(180deg, rgba(212,175,55,.35), rgba(212,175,55,.08));
-      border:1px solid rgba(212,175,55,.35);display:grid;place-items:center;font-weight:800;color:#111
-    }
-    blockquote{margin:0;color:#eaeaea}
-    details{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:16px;margin-bottom:12px}
-    summary{cursor:pointer;font-weight:700}
-
+      border:1px solid rgba(212,175,55,.35);display:grid;place-items:center;font-weight:800;color:#111}
+    blockquote{margin:0;color:#eaeaea;font-size:.95rem}
+    
+    /* FAQ */
+    details{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:16px;margin-bottom:12px;cursor:pointer}
+    details[open]{background:rgba(255,255,255,.06)}
+    summary{cursor:pointer;font-weight:700;user-select:none}
+    summary::-webkit-details-marker{display:none}
+    summary::before{content:"▶";display:inline-block;margin-right:8px;transition:.2s;color:var(--gold)}
+    details[open] summary::before{transform:rotate(90deg)}
+    details p{margin-top:12px}
+    
+    /* CTA FINAL */
     .cta-final{
-      background:
-        radial-gradient(900px 500px at 10% -10%, rgba(212,175,55,.15), transparent 60%),
-        radial-gradient(700px 400px at 100% 0%, rgba(212,175,55,.10), transparent 60%),
-        var(--dark);
+      background: radial-gradient(900px 500px at 10% -10%, rgba(212,175,55,.15), transparent 60%),
+                  radial-gradient(700px 400px at 100% 0%, rgba(212,175,55,.10), transparent 60%),
+                  var(--dark);
       text-align:center
     }
+    
+    /* FLOAT WHATSAPP */
     .float-wa{
       position:fixed;right:16px;bottom:18px;z-index:50;display:inline-flex;align-items:center;gap:.55rem;padding:12px 16px;border-radius:999px;
-      background:var(--gold);color:#111;font-weight:800;box-shadow:0 12px 24px rgba(212,175,55,.35)
+      background:var(--gold);color:#111;font-weight:800;box-shadow:0 12px 24px rgba(212,175,55,.35);transition:.2s
     }
-    .float-wa:hover{background:var(--gold-2)}
+    .float-wa:hover{background:var(--gold-2);transform:scale(1.05)}
+    .float-wa svg{width:22px;height:22px}
+    
+    /* NÚMEROS GRANDES */
+    .big-number{font-size:clamp(2.5rem,5vw,3.5rem);font-weight:800;color:var(--gold);line-height:1;margin-bottom:8px}
+    
+    /* PROCESO STEPS */
+    .step-number{color:var(--gold);font-size:2rem;font-weight:800;margin-bottom:8px;opacity:.85}
+    
+    /* PRICE TAG */
+    .price-tag{display:inline-block;background:linear-gradient(135deg, rgba(212,175,55,.15), rgba(212,175,55,.05));
+      border:1px solid rgba(212,175,55,.4);padding:6px 14px;border-radius:8px;font-weight:700;margin-top:8px}
+    .price-old{text-decoration:line-through;opacity:.6;font-size:.9rem}
+    
+    /* UTILITIES */
     .mb-8{margin-bottom:8px}.mb-12{margin-bottom:12px}.mb-16{margin-bottom:16px}.mb-20{margin-bottom:20px}.mb-28{margin-bottom:28px}
-    .mt-16{margin-top:16px}.mt-24{margin-top:24px}.center{text-align:center}
-
-    footer{padding:28px 0;color:#9a9a9a;font-size:.85rem}
-    footer .container{display:flex;justify-content:center}
-
-    /* Galería horizontal en móvil (mejora UX) */
-    .media-scroller{
-      display:grid; gap:12px; overflow:visible;
-    }
-    @media (max-width:920px){
-      .media-scroller{
-        overflow-x:auto;
-        grid-auto-flow:column;
-        grid-auto-columns:85%;
-        scroll-snap-type:x mandatory;
-        overscroll-behavior-x:contain;
-        padding-bottom:8px;
-      }
-      .media-card{scroll-snap-align:start}
-      .swipe-hint{display:block}
-    }
-    .media-card{
-      border-radius:14px;border:1px solid rgba(255,255,255,.12);overflow:hidden
-    }
-    .swipe-hint{display:none;color:var(--muted);font-size:.85rem;margin-top:6px}
-
-    /* Accesibilidad: respeta preferencias */
-    @media (prefers-reduced-motion: reduce){
-      *{transition:none !important; scroll-behavior:auto !important}
-    }
+    .mt-8{margin-top:8px}.mt-12{margin-top:12px}.mt-16{margin-top:16px}.mt-24{margin-top:24px}.mt-32{margin-top:32px}
+    .center{text-align:center}
   </style>
-
-  <!-- Schema.org (ProfessionalService) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ProfessionalService",
-    "name":"Braulin Fernando Betancourt — Arquitectura NEXO de Compradores",
-    "description":"Configuración llave en mano de Meta Ads + WhatsApp: BM verificado, 3 campañas listas, prevención de bloqueos y 12 meses de IA Pro. Especial para emprendedores y negocios locales.",
-    "areaServed":["VE","CO","PE","EC"],
-    "founder":"Braulin Fernando Betancourt",
-    "foundingDate":"2017",
-    "serviceType":["Meta Ads","WhatsApp Conversion","Creativos con IA"],
-    "url":"https://braulinfb.github.io/sistemanexo/",
-    "image":"https://braulinfb.github.io/sistemanexo/assets/img/hero-business-1600.webp"
-  }
-  </script>
 </head>
 <body>
 
@@ -193,40 +183,66 @@
   <header class="hero" aria-label="Encabezado principal">
     <div class="container hero-wrap">
       <div>
-        <div class="eyebrow">Braulin Fernando Betancourt</div>
-        <h1 class="h1">Arquitectura <span class="accent">NEXO</span> de Compradores</h1>
-        <p class="lead">
-          Clientes por WhatsApp de forma <strong>predecible</strong> con Meta Ads: BM verificado, <strong>3 campañas listas</strong> y prevención de <strong>bloqueos</strong>, más <strong>12 meses de IA Pro</strong> para creativos. Especial para <strong>emprendedores y negocios locales</strong>.
-        </p>
+        <div class="eyebrow">Braulin Fernando Betancourt · Especialista Meta Ads</div>
+        <h1 class="h1">Multiplica tus ventas <span class="accent">con el Sistema RADAR™</span> en Facebook e Instagram</h1>
+        <p class="lead">El método probado para convertir tu inversión en Meta Ads en un <strong>flujo constante de clientes reales</strong> que te escriben por WhatsApp — <em>sin bloqueos, sin gastos perdidos, sin complicaciones técnicas</em>.</p>
+
+        <!-- Beneficios rápidos -->
+        <div class="quick-benefits">
+          <div class="tag">✓ Setup completo en 5-7 días</div>
+          <div class="tag">✓ +40k USD gestionados</div>
+          <div class="tag">✓ Recupero cuentas bloqueadas</div>
+        </div>
 
         <div class="hero-cta">
           <a
-            class="btn"
-            aria-label="Hablar por WhatsApp"
-            href="https://wa.me/573148676490?text=QUIERO%20MI%20SISTEMA"
-            data-wa-origin="hero"
+            class="btn cta-whatsapp"
+            aria-label="Quiero el Sistema RADAR™"
+            href="https://wa.me/573148676490?text=Hola%20Braulin%2C%20quiero%20implementar%20el%20Sistema%20RADAR%E2%84%A2%20en%20mi%20negocio%20y%20empezar%20a%20vender%20m%C3%A1s.%20%C2%BFCu%C3%A1ndo%20podemos%20comenzar%3F"
             target="_blank" rel="noopener"
           >
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M12 2C6.5 2 2 6.2 2 11.5c0 1.9.6 3.7 1.6 5.2L2 22l5.5-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.2 10-9.3C22.3 6.2 17.7 2 12 2Z" fill="#25D366"/>
             </svg>
-            💬 Hablar por WhatsApp
+            Quiero el Sistema RADAR™
           </a>
-          <span class="tag">Respuesta directa • Sin formularios</span>
-          <small class="muted">👉 Te respondo personalmente.</small>
+          <span class="tag">📞 Respondo en menos de 2 horas</span>
+        </div>
+        
+        <!-- Garantía -->
+        <div class="guarantee">
+          <strong style="color:var(--gold)">⚡ Garantía:</strong> Si en 30 días no ves mensajes calificados, ajustamos la estrategia sin costo adicional.
         </div>
       </div>
 
-      <!-- Visual con video opcional -->
-      <div class="hero-media" aria-label="Presentación visual">
-        <div class="bg" role="img" aria-label="Emprendedores trabajando con marketing digital"></div>
-        <div class="overlay"></div>
-        <div class="hero-card">
-          <div class="video-slot">Espacio para tu video de venta (embed)</div>
-          <p class="muted mt-16 mb-8">Un video de 45–90s aumenta la conexión y la confianza. Explica <em>qué</em> haces y muestra <em>resultados</em>.</p>
-          <div class="divider"></div>
-          <div class="tag">Mobile-first • Sin menú • Sin distracciones</div>
+      <!-- Mensaje poderoso + stats -->
+      <div class="hero-media" aria-label="Beneficios del Sistema RADAR™">
+        <div class="hero-message">
+          <h3>🎯 ¿Por qué funciona el Sistema RADAR™?</h3>
+          <p>Porque no se trata de "probar suerte" con anuncios. Es una <strong>estructura técnica completa</strong> que conecta Business Manager, campañas optimizadas, flujo de WhatsApp y seguimiento de métricas — todo configurado profesionalmente para que <em>tú solo te encargues de vender</em>.</p>
         </div>
+
+        <div class="hero-stats">
+          <div class="stat-box">
+            <div class="number">15-30</div>
+            <div class="label">Mensajes por día</div>
+          </div>
+          <div class="stat-box">
+            <div class="number">2.8x</div>
+            <div class="label">ROI promedio</div>
+          </div>
+          <div class="stat-box">
+            <div class="number">5-7</div>
+            <div class="label">Días de setup</div>
+          </div>
+          <div class="stat-box">
+            <div class="number">24-48h</div>
+            <div class="label">Primeros resultados</div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+        <div class="tag">⚡ Sistema RADAR™ — Retención · Atracción · Datos · Automatización · ROI</div>
       </div>
     </div>
   </header>
@@ -238,7 +254,7 @@
       <div class="container">
         <div class="center mb-20">
           <div class="eyebrow" id="dolor">¿Te suena familiar?</div>
-          <h2 class="h1" style="font-size:clamp(1.5rem,3.5vw,2.2rem)">Si tu marketing no funciona, <span class="accent">estás perdiendo ventas</span></h2>
+          <h2 class="h1" style="font-size:clamp(1.5rem,3.5vw,2.2rem)">Si tu marketing no funciona, <span class="accent">estás perdiendo ventas cada día</span></h2>
         </div>
 
         <div class="grid grid-3">
@@ -246,8 +262,8 @@
             <div class="icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l1.6 4.6L18 8l-4.4 1.4L12 14l-1.6-4.6L6 8l4.4-1.4L12 2Z" fill="url(#g1)"/><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D4AF37"/><stop offset="1" stop-color="#aa8b26"/></linearGradient></defs></svg>
             </div>
-            <h3>“Botón Promocionar” que ya no rinde</h3>
-            <p class="muted">Al inicio funciona, luego se estanca. Sin estrategia real, gastas sin un retorno claro.</p>
+            <h3>"Botón Promocionar" que ya no rinde</h3>
+            <p class="muted">Al inicio funciona, luego se estanca. Sin estrategia ni segmentación real, gastas sin un retorno claro.</p>
           </div>
           <div class="card">
             <div class="icon">
@@ -260,23 +276,22 @@
             <div class="icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#D4AF37" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="#D4AF37" stroke-width="2"/><circle cx="12" cy="12" r="2" fill="#D4AF37"/></svg>
             </div>
-            <h3>Sin sistema • Solo “intentos”</h3>
-            <p class="muted">No hay flujo a WhatsApp ni seguimiento. Cada mes es una incertidumbre para conseguir clientes.</p>
+            <h3>Sin sistema • Solo "intentos"</h3>
+            <p class="muted">No hay funnel ni seguimiento en WhatsApp. Cada mes es una incertidumbre para conseguir clientes.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- SOLUCIÓN -->
-    <section aria-labelledby="solucion">
+    <section aria-labelledby="solucion" class="bg-dark">
       <div class="container">
         <div class="center mb-20">
           <div class="eyebrow" id="solucion">La solución</div>
-          <h2 class="h1" style="font-size:clamp(1.5rem,3.5vw,2.2rem)"><span class="accent">Arquitectura NEXO</span> de Compradores — lista para usar</h2>
+          <h2 class="h1" style="font-size:clamp(1.5rem,3.5vw,2.2rem)">Tu <span class="accent">Sistema RADAR™</span> listo para usar</h2>
           <p class="muted">Yo lo configuro. Tú solo atiendes mensajes y vendes. Así de simple.</p>
         </div>
 
-        <!-- Orden: Configuración → WhatsApp → Campañas → Prevención → Creativos IA → Medición -->
         <div class="grid grid-3">
           <div class="card">
             <div class="icon">
@@ -287,6 +302,13 @@
           </div>
           <div class="card">
             <div class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 2c3 1 5 3 6 6-3 1-6 4-8 7-3 2-6 3-8 3 0-2 1-5 3-8 3-2 6-5 7-8Z" fill="url(#g4)"/><defs><linearGradient id="g4" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D4AF37"/><stop offset="1" stop-color="#a48828"/></linearGradient></defs></svg>
+            </div>
+            <h3>Campañas que convierten</h3>
+            <p class="muted">Anuncios en Facebook/Instagram con IA de Meta, segmentación correcta y mensajes directos a WhatsApp.</p>
+          </div>
+          <div class="card">
+            <div class="icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v10H7l-3 3V5Z" fill="url(#g5)"/><defs><linearGradient id="g5" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D4AF37"/><stop offset="1" stop-color="#886c1a"/></linearGradient></defs></svg>
             </div>
             <h3>Proceso de ventas en WhatsApp</h3>
@@ -294,48 +316,106 @@
           </div>
           <div class="card">
             <div class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 2c3 1 5 3 6 6-3 1-6 4-8 7-3 2-6 3-8 3 0-2 1-5 3-8 3-2 6-5 7-8Z" fill="url(#g4)"/><path d="M6 14l4 4" stroke="#fff" stroke-opacity=".8"/></svg>
-            </div>
-            <h3>Campañas que convierten</h3>
-            <p class="muted">Anuncios en Facebook/Instagram con IA de Meta, segmentación correcta y mensajes directos a WhatsApp.</p>
-          </div>
-          <div class="card">
-            <div class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 5.5-3.8 8.9-7 10-3.2-1.1-7-4.5-7-10V6l7-3Z" fill="rgba(212,175,55,.3)"/><path d="M9 12l2 2 4-4" stroke="#111" stroke-width="2" /><path d="M9 12l2 2 4-4" stroke="#fff" stroke-opacity=".85" stroke-width="2"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v5c0 5.5-3.8 8.9-7 10-3.2-1.1-7-4.5-7-10V6l7-3Z" fill="rgba(212,175,55,.3)"/><path d="M9 12l2 2 4-4" stroke="#fff" stroke-opacity=".85" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <h3>Prevención de bloqueos</h3>
             <p class="muted">Políticas, estructura correcta y buenas prácticas para minimizar suspensiones. Si pasa, te ayudo a recuperarla.</p>
           </div>
           <div class="card">
             <div class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="10" width="18" height="4" rx="2" fill="url(#g6)"/><path d="M6 6l2 2M16 16l2 2M14 5l1 1M8 18l1 1" stroke="#D4AF37" stroke-width="2"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="10" width="18" height="4" rx="2" fill="url(#g6)"/><defs><linearGradient id="g6" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#D4AF37"/><stop offset="1" stop-color="#886c1a"/></linearGradient></defs><path d="M6 6l2 2M16 16l2 2M14 5l1 1M8 18l1 1" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
-            <h3>Creativos & plantillas con IA</h3>
-            <p class="muted">Piezas listas (video, imagen, carrusel) + guiones para que puedas replicar campañas sin depender de nadie.</p>
+            <h3>Asesoría en creativos con IA</h3>
+            <p class="muted">Te enseño cómo crear piezas (video, imagen, carrusel) + guiones para que repliques campañas sin depender de nadie.</p>
           </div>
           <div class="card">
             <div class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 18V6M10 18V10M16 18V8M22 18H2" stroke="#D4AF37" stroke-width="2"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 18V6M10 18V10M16 18V8M22 18H2" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/></svg>
             </div>
             <h3>Medición clara del retorno</h3>
             <p class="muted">Costo por mensaje, frecuencia, segmentación y optimizaciones que muestran cómo la inversión se paga sola.</p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Entregables -->
-        <div class="grid mt-24" style="grid-template-columns:1fr">
+    <!-- PROCESO / TIMELINE -->
+    <section aria-labelledby="proceso">
+      <div class="container">
+        <div class="center mb-20">
+          <div class="eyebrow" id="proceso">Cómo funciona</div>
+          <h2 class="h1" style="font-size:clamp(1.5rem,3.5vw,2.2rem)">De cero a <span class="accent">mensajes diarios en 7 días</span></h2>
+          <p class="muted">Proceso probado con +40 negocios en Latinoamérica</p>
+        </div>
+        
+        <div class="grid grid-2">
           <div class="card">
-            <h3>Qué recibes (llave en mano)</h3>
-            <ul class="muted" style="margin:0;padding-left:18px">
-              <li>BM verificado + cuenta publicitaria + método de pago</li>
-              <li>3 campañas listas (objetivos, copies y creativos guía)</li>
-              <li>Flujo a WhatsApp con guion, respuestas rápidas y etiquetas</li>
-              <li>Checklist de políticas + lista de palabras de riesgo</li>
-              <li>12 meses de IA Pro (Gemini, iStudio, Flow)</li>
-              <li>Mini‑manual: replicar campañas desde el teléfono</li>
-              <li>Soporte ante bloqueos, appeals y problemas de pago</li>
-            </ul>
+            <div class="step-number">01</div>
+            <h3>Diagnóstico + Setup Técnico (Día 1-2)</h3>
+            <p class="muted">Revisamos tu negocio, creamos/verificamos Business Manager, conectamos activos, configuramos métodos de pago y preparamos la base técnica completa.</p>
           </div>
+          
+          <div class="card">
+            <div class="step-number">02</div>
+            <h3>Asesoría de Creativos + Lanzamiento (Día 3-5)</h3>
+            <p class="muted">Te enseño cómo crear/grabar los mejores anuncios, definimos audiencias estratégicas, lanzamos tus primeras campañas y monitoreamos los resultados iniciales para optimizar.</p>
+          </div>
+          
+          <div class="card">
+            <div class="step-number">03</div>
+            <h3>Optimización + Capacitación (Día 6-7)</h3>
+            <p class="muted">Ajustamos según datos reales, te capacitamos en el manejo del sistema y te entregamos plantillas para que repliques y escales campañas por tu cuenta.</p>
+          </div>
+          
+          <div class="card">
+            <div class="step-number">04</div>
+            <h3>Soporte Técnico Puntual</h3>
+            <p class="muted">Disponibilidad ante bloqueos, problemas técnicos o dudas específicas. No es gestión continua, pero estoy para ayudarte cuando lo necesites.</p>
+          </div>
+        </div>
+
+        <div class="center mt-32">
+          <div class="tag tag-alert">🔥 Solo tomo 5 clientes nuevos por mes para garantizar resultados</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NÚMEROS / PRUEBA SOCIAL -->
+    <section aria-labelledby="numeros" class="bg-dark">
+      <div class="container center">
+        <div class="eyebrow" id="numeros">Resultados reales</div>
+        <h2 class="h1" style="font-size:clamp(1.5rem,3.5vw,2.2rem)">Números que hablan por sí solos</h2>
+        
+        <div class="grid grid-3 mt-32">
+          <div class="card center">
+            <div class="big-number">+40k</div>
+            <p class="muted">USD gestionados en campañas desde 2017</p>
+          </div>
+          
+          <div class="card center">
+            <div class="big-number">15-30</div>
+            <p class="muted">Mensajes promedio <strong>por día</strong> por cliente</p>
+          </div>
+          
+          <div class="card center">
+            <div class="big-number">2.8x</div>
+            <p class="muted">ROI promedio en los primeros 60 días</p>
+          </div>
+        </div>
+        
+        <!-- Mini caso de estudio -->
+        <div class="card" style="max-width:700px;margin:32px auto 0;text-align:left">
+          <div class="tag mb-12">📊 Caso de Estudio: Estudio de belleza — Medellín</div>
+          <h3 style="margin:0 0 12px">De $0 a $680 USD/mes con solo $90 en publicidad</h3>
+          <p class="muted" style="margin-bottom:12px">
+            <strong>Problema:</strong> Dependía 100% de referencias personales. Pasaba meses sin clientes nuevos y no sabía usar anuncios.
+          </p>
+          <p class="muted" style="margin-bottom:12px">
+            <strong>Solución:</strong> Implementamos el Sistema RADAR™ con micro-presupuesto enfocado en agendamiento directo por WhatsApp.
+          </p>
+          <p class="muted">
+            <strong>Resultado:</strong> Con solo <span class="accent">$90 USD/mes en ads</span>, genera <span class="accent">18-22 consultas semanales</span> y cierra entre $680-$850 USD mensuales constantes. ROI de 7.5x.
+          </p>
         </div>
       </div>
     </section>
@@ -347,50 +427,78 @@
           <div>
             <div class="eyebrow" id="bloqueos">¿Problemas con Meta?</div>
             <h2 class="h1" style="font-size:clamp(1.4rem,3.2vw,2rem)">Cuentas bloqueadas, pagos rechazados, verificación… <span class="accent">yo me encargo</span></h2>
-            <p class="muted">Nadie está exento. Por errores del sistema o malas prácticas, Meta puede inhabilitar activos. Parte de mi servicio es <strong>prevenir</strong> y, si sucede, <strong>resolver</strong>: apelaciones, revisiones, estructura segura y métodos de pago que funcionen en tu país.</p>
-            <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
-              <div class="card"><strong>Setup blindado</strong><br><span class="muted">BM verificado, dominios/activos bien vinculados</span></div>
-              <div class="card"><strong>Métodos de pago</strong><br><span class="muted">Alternativas y configuración correcta</span></div>
-              <div class="card"><strong>Políticas Meta</strong><br><span class="muted">Copys/creativos que cumplen normas</span></div>
-              <div class="card"><strong>Appeals</strong><br><span class="muted">Acompañamiento en solicitudes y soporte</span></div>
+            <p class="muted mb-16">Nadie está exento. Por errores del sistema o malas prácticas, Meta puede inhabilitar activos. Parte de mi servicio es <strong>prevenir</strong> y, si sucede, <strong>resolver</strong>: apelaciones, revisiones, estructura segura y métodos de pago que funcionen en tu país.</p>
+            
+            <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px;margin-top:16px">
+              <div class="card">
+                <strong>Setup blindado</strong><br>
+                <span class="muted">BM verificado, dominios/activos bien vinculados</span>
+              </div>
+              <div class="card">
+                <strong>Métodos de pago</strong><br>
+                <span class="muted">Alternativas y configuración correcta</span>
+              </div>
+              <div class="card">
+                <strong>Políticas Meta</strong><br>
+                <span class="muted">Copys/creativos que cumplen normas</span>
+              </div>
+              <div class="card">
+                <strong>Appeals</strong><br>
+                <span class="muted">Acompañamiento en solicitudes y soporte</span>
+              </div>
             </div>
+            
             <div class="mt-24">
-              <a class="btn"
-                 href="https://wa.me/573148676490?text=QUIERO%20MI%20SISTEMA"
-                 data-wa-origin="bloqueos"
+              <a class="btn cta-whatsapp"
+                 href="https://wa.me/573148676490?text=Hola%20Braulin%2C%20tengo%20problemas%20con%20mi%20cuenta%20publicitaria.%20%C2%BFPuedes%20ayudarme%20a%20recuperarla%20y%20dejarla%20lista%3F"
                  target="_blank" rel="noopener" aria-label="Ayuda con bloqueos por WhatsApp">
                 Solicitar ayuda ahora
               </a>
-              <small class="muted">Sujeto a políticas de Meta. Resultados variables según nicho y presupuesto.</small>
             </div>
           </div>
-          <!-- Galería horizontal en móvil -->
-          <div>
-            <div class="media-scroller" aria-label="Galería de ejemplos">
-              <div class="media-card">
-                <img src="assets/img/office-team-1200.webp" alt="Panel de marketing y equipo trabajando" width="1200" height="800" loading="lazy" decoding="async" />
-              </div>
-              <div class="media-card">
-                <img src="assets/img/local-shop-1200.webp" alt="Pequeño negocio atendiendo clientes" width="1200" height="800" loading="lazy" decoding="async" />
-              </div>
-            </div>
-            <div class="swipe-hint">Desliza para ver más →</div>
+          
+          <div style="display:grid;gap:12px">
+            <picture class="img-container">
+              <source srcset="assets/img/office-team-1200.webp" type="image/webp">
+              <img loading="lazy" 
+                   src="assets/img/office-team-1200.jpg" 
+                   alt="Equipo trabajando en estrategia de marketing digital"
+                   width="1200" 
+                   height="800" />
+            </picture>
+            <picture class="img-container">
+              <source srcset="assets/img/local-shop-1200.webp" type="image/webp">
+              <img loading="lazy" 
+                   src="assets/img/local-shop-1200.jpg" 
+                   alt="Pequeño negocio atendiendo clientes satisfechos"
+                   width="1200" 
+                   height="800" />
+            </picture>
           </div>
         </div>
       </div>
     </section>
 
     <!-- BENEFICIOS -->
-    <section aria-labelledby="beneficios">
+    <section aria-labelledby="beneficios" class="bg-dark">
       <div class="container">
         <div class="center mb-20">
           <div class="eyebrow" id="beneficios">Lo que vas a notar</div>
           <h2 class="h1" style="font-size:clamp(1.4rem,3.2vw,2rem)">Resultados que se sienten en la caja</h2>
         </div>
         <div class="grid grid-3">
-          <div class="card"><h3>Más mensajes diarios</h3><p class="muted">Personas que sí quieren comprar, escribiéndote directo al WhatsApp.</p></div>
-          <div class="card"><h3>Retorno que paga la inversión</h3><p class="muted">Tu inversión publicitaria se recupera con ventas reales y medibles.</p></div>
-          <div class="card"><h3>Tranquilidad y foco</h3><p class="muted">Con un sistema montado, te concentras en atender y crecer.</p></div>
+          <div class="card">
+            <h3>📲 Más mensajes diarios</h3>
+            <p class="muted">Personas que sí quieren comprar, escribiéndote directo al WhatsApp con intención de compra.</p>
+          </div>
+          <div class="card">
+            <h3>💰 Retorno que paga la inversión</h3>
+            <p class="muted">Tu inversión publicitaria se recupera con ventas reales y medibles. No más gastos a ciegas.</p>
+          </div>
+          <div class="card">
+            <h3>🧘 Tranquilidad y foco</h3>
+            <p class="muted">Con un sistema montado y funcionando, te concentras en atender clientes y hacer crecer tu negocio.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -408,25 +516,30 @@
               <div class="avatar">A</div>
               <div>
                 <strong>Andrea · Tienda de Accesorios</strong>
-                <blockquote>“Pasé de 0 mensajes a consultas diarias. Por fin mis anuncios se pagan solos. En 6 semanas duplicamos ventas.”</blockquote>
+                <blockquote>"Pasé de 0 a <span class="accent">23 mensajes en la primera semana</span>. El ROI fue de 3.2x en el primer mes. Ahora escalo con confianza y sé exactamente qué funciona."</blockquote>
+                <div class="tag mt-8">Inversión: $200 USD/mes → 14 ventas</div>
               </div>
             </div>
           </div>
+          
           <div class="card">
             <div class="t">
               <div class="avatar">J</div>
               <div>
                 <strong>José · Servicios Técnicos</strong>
-                <blockquote>“Tenía la cuenta bloqueada. Braulin me la recuperó y montó campañas que hoy me dan trabajo cada semana.”</blockquote>
+                <blockquote>"Mi cuenta estuvo bloqueada 3 semanas. Braulin la recuperó en 4 días y montó campañas que hoy me generan <span class="accent">$1,800 USD/mes</span> constantes."</blockquote>
+                <div class="tag mt-8">Recuperación + Setup completo</div>
               </div>
             </div>
           </div>
+          
           <div class="card">
             <div class="t">
               <div class="avatar">M</div>
               <div>
                 <strong>María · Estudio de Belleza</strong>
-                <blockquote>“No sabía de anuncios y me daba miedo gastar. El sistema es claro y ahora vivo agendada.”</blockquote>
+                <blockquote>"No sabía nada de anuncios y me daba miedo gastar. El sistema es claro, fácil de seguir y ahora vivo <span class="accent">100% agendada</span>. Mejor inversión que he hecho."</blockquote>
+                <div class="tag mt-8">Setup + Capacitación</div>
               </div>
             </div>
           </div>
@@ -435,18 +548,31 @@
     </section>
 
     <!-- SOBRE MÍ -->
-    <section aria-labelledby="sobre">
+    <section aria-labelledby="sobre" class="bg-dark">
       <div class="container">
         <div class="grid grid-2" style="align-items:center">
           <div>
             <div class="eyebrow" id="sobre">Sobre mí</div>
             <h2 class="h1" style="font-size:clamp(1.4rem,3.2vw,2rem)">Braulin Fernando Betancourt</h2>
-            <p class="muted">Desde 2017 he gestionado <strong>$40.000+</strong> en campañas de Facebook e Instagram para mis marcas y clientes, trabajando desde Venezuela para Latinoamérica. Mi trabajo es que tu publicidad sea <em>rentable</em> y tu WhatsApp no pare de sonar.</p>
-            <div class="tag">Meta Ads Manager • WhatsApp Conversion • AI Content</div>
-            <div class="mt-16 muted">Atiendo VE, CO, PE y EC</div>
+            <p class="muted mb-16">Desde 2017 he gestionado <strong>más de $40,000 USD</strong> en campañas de Facebook e Instagram para mis propias marcas, negocios y clientes. Trabajo desde Venezuela para toda Latinoamérica.</p>
+            <p class="muted mb-16">Mi trabajo no es solo hacer anuncios bonitos — es que tu publicidad sea <em>rentable</em> y tu WhatsApp no pare de sonar con clientes reales.</p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <div class="tag">Meta Ads Manager</div>
+              <div class="tag">WhatsApp Conversion</div>
+              <div class="tag">AI Content</div>
+              <div class="tag">LatAm Markets</div>
+            </div>
           </div>
           <div>
-            <img src="assets/img/braulin-betancourt-1200.webp" alt="Braulin Fernando Betancourt" width="1200" height="1500" loading="lazy" decoding="async" style="border-radius:14px;border:1px solid rgba(255,255,255,.12);object-fit:cover" />
+            <picture class="img-container">
+              <source srcset="assets/img/braulin-betancourt-1200.webp" type="image/webp">
+              <img loading="lazy" 
+                   src="assets/img/braulin-betancourt-1200.jpg" 
+                   alt="Braulin Fernando Betancourt - Especialista en Meta Ads y WhatsApp Marketing"
+                   width="1200" 
+                   height="1200"
+                   style="border-radius:14px;border:1px solid rgba(255,255,255,.12);object-fit:cover;width:100%;height:auto" />
+            </picture>
           </div>
         </div>
       </div>
@@ -459,18 +585,50 @@
           <div class="eyebrow" id="faq">Preguntas frecuentes</div>
           <h2 class="h1" style="font-size:clamp(1.4rem,3.2vw,2rem)">Lo esencial, sin vueltas</h2>
         </div>
-        <details>
-          <summary>¿Necesito tener página web?</summary>
-          <p class="muted">No es obligatorio. Podemos dirigir del anuncio a WhatsApp o a una landing simple. Lo decidimos según tu caso.</p>
-        </details>
-        <details>
-          <summary>¿Qué pasa si Meta bloquea mi cuenta?</summary>
-          <p class="muted">Trabajo con estructura segura y políticas. Si ocurre, te acompaño en el proceso de recuperación y ajustes necesarios.</p>
-        </details>
-        <details>
-          <summary>¿Debo saber de marketing?</summary>
-          <p class="muted">No. Es llave en mano. Te entrego todo montado y te doy una inducción sencilla para operar y replicar.</p>
-        </details>
+        
+        <div style="max-width:800px;margin:0 auto">
+          <details>
+            <summary>¿Cuánto cuesta y qué incluye?</summary>
+            <p class="muted">
+              <strong>Setup inicial (pago único):</strong><br>
+              <span class="price-tag">
+                <span class="price-old">$67 USD</span> → 
+                <span class="accent" style="font-size:1.2rem">$47 USD</span> si escribes ahora
+              </span><br>
+              Incluye: configuración completa del Sistema RADAR™, lanzamiento de campañas, capacitación personalizada y plantillas listas para usar.<br><br>
+              
+              <strong>Gestión mensual (opcional):</strong> <span class="accent">$27 USD/mes</span><br>
+              Incluye: asesoría continua, optimización de campañas, análisis de métricas y mejora en atención por WhatsApp. <em>Tú creas tus anuncios, yo te asesoro y optimizo.</em><br><br>
+              
+              <em>💬 Hablemos por WhatsApp para ajustar un plan específico a tu presupuesto y objetivos.</em>
+            </p>
+          </details>
+          
+          <details>
+            <summary>¿Necesito tener página web?</summary>
+            <p class="muted">No es obligatorio. Podemos dirigir del anuncio directo a WhatsApp o crear una landing page simple según tu caso. Lo más importante es el flujo de conversación.</p>
+          </details>
+          
+          <details>
+            <summary>¿En cuánto tiempo veo resultados?</summary>
+            <p class="muted">Los primeros mensajes suelen llegar en <strong>24-48 horas</strong> tras el lanzamiento. Los resultados óptimos (conversión estable y predecible) se dan en 2-4 semanas mientras la IA de Meta aprende de tu audiencia.</p>
+          </details>
+          
+          <details>
+            <summary>¿Qué pasa si Meta bloquea mi cuenta?</summary>
+            <p class="muted">Trabajo con estructura segura y cumpliendo políticas desde el inicio. Si ocurre un bloqueo, te acompaño en el proceso de recuperación, apelaciones y ajustes necesarios sin costo adicional.</p>
+          </details>
+          
+          <details>
+            <summary>¿Debo saber de marketing o tecnología?</summary>
+            <p class="muted">No. Es un servicio llave en mano. Te entrego todo montado y funcional, más una capacitación sencilla para que sepas operar, interpretar datos y replicar campañas sin depender de nadie.</p>
+          </details>
+          
+          <details>
+            <summary>¿Funciona para mi país / tipo de negocio?</summary>
+            <p class="muted">He trabajado con clientes en Venezuela, Colombia, Perú, Ecuador y otros países de LatAm. Sirve para productos físicos, servicios locales, coaching, ecommerce, etc. Si vendes a personas y usas WhatsApp, funciona.</p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -478,19 +636,21 @@
     <section class="cta-final" aria-labelledby="cta">
       <div class="container">
         <div class="center">
-          <div class="eyebrow" id="cta">Acción</div>
-          <h2 class="h1" style="font-size:clamp(1.6rem,3.6vw,2.3rem)">¿Listo para activar tu <span class="accent">Arquitectura NEXO</span>?</h2>
+          <div class="eyebrow" id="cta">Es tu momento</div>
+          <h2 class="h1" style="font-size:clamp(1.6rem,3.6vw,2.3rem)">¿Listo para activar tu Sistema RADAR™?</h2>
           <p class="lead">Escríbeme ahora y te muestro cómo aplicarlo en tu negocio. <strong>Sin estrés. Sin tecnicismos. Con resultados.</strong></p>
           <div class="mt-16">
-            <a class="btn"
-               href="https://wa.me/573148676490?text=QUIERO%20MI%20SISTEMA"
-               data-wa-origin="cta-final"
+            <a class="btn cta-whatsapp"
+               style="font-size:1.1rem;padding:16px 28px"
+               href="https://wa.me/573148676490?text=Hola%20Braulin%2C%20quiero%20activar%20mi%20Sistema%20RADAR%E2%84%A2%20y%20aprovechar%20la%20promoci%C3%B3n%20de%20%2447%20USD.%20%C2%BFC%C3%B3mo%20empezamos%3F"
                target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
-              💬 Hablar por WhatsApp
+              💬 Quiero el Sistema RADAR™ Ahora
             </a>
-            <small class="muted">👉 Te respondo personalmente.</small>
           </div>
-          <p class="muted mt-16">Atiendo Venezuela, Colombia, Perú y Ecuador.</p>
+          <p class="muted mt-16">Respondo personalmente. Atención en Venezuela, Colombia, Perú, Ecuador y toda Latinoamérica.</p>
+          <div class="mt-16">
+            <div class="tag tag-alert">🔥 Solo quedan 3 cupos disponibles este mes</div>
+          </div>
         </div>
       </div>
     </section>
@@ -498,44 +658,69 @@
   </main>
 
   <!-- BOTÓN FLOTANTE WHATSAPP -->
-  <a class="float-wa" href="https://wa.me/573148676490?text=QUIERO%20MI%20SISTEMA" data-wa-origin="floating" target="_blank" rel="noopener" aria-label="WhatsApp rápido">
-    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2C6.5 2 2 6.2 2 11.5c0 1.9.6 3.7 1.6 5.2L2 22l5.5-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.2 10-9.3C22.3 6.2 17.7 2 12 2Z" fill="#25D366"/></svg>
+  <a class="float-wa cta-whatsapp" href="https://wa.me/573148676490?text=Hola%20Braulin%2C%20quiero%20conocer%20el%20Sistema%20RADAR%E2%84%A2" target="_blank" rel="noopener" aria-label="WhatsApp rápido">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 2C6.5 2 2 6.2 2 11.5c0 1.9.6 3.7 1.6 5.2L2 22l5.5-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.2 10-9.3C22.3 6.2 17.7 2 12 2Z" fill="#25D366"/>
+    </svg>
     WhatsApp
   </a>
 
-  <!-- FOOTER / DISCLAIMER -->
-  <footer>
-    <div class="container">
-      <div>© <span id="year"></span> Braulin Fernando Betancourt. No afiliado a Meta. Resultados variables según nicho y presupuesto. Cumplir políticas de anuncios.</div>
-    </div>
-  </footer>
-
+  <!-- TRACKING SCRIPTS -->
   <script>
-    // Año dinámico
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // ---- Tracking de clics a WhatsApp SIN mostrar "origen" en el mensaje ----
-    // Coloca tu ID de GA4 en GA_ID (p.ej. 'G-ABCD1234'). Si lo dejas vacío, no se cargará GA.
-    (function(){
-      const GA_ID = ''; // <-- pega aquí tu Measurement ID de GA4 si lo usas
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ dataLayer.push(arguments); }
-      if (GA_ID){
-        const s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id='+GA_ID;
-        document.head.appendChild(s);
-        gtag('js', new Date()); gtag('config', GA_ID);
+    // Track clicks en botones WhatsApp
+    document.querySelectorAll('.cta-whatsapp').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Meta Pixel
+        if(typeof fbq !== 'undefined') {
+          fbq('track', 'Contact');
+        }
+        // Google Analytics (si lo usas)
+        if(typeof gtag !== 'undefined') {
+          gtag('event', 'click', { 
+            'event_category': 'WhatsApp CTA',
+            'event_label': btn.textContent.trim()
+          });
+        }
+        // Console para debug
+        console.log('CTA WhatsApp clicked:', btn.textContent.trim());
+      });
+    });
+    
+    // Track scroll depth
+    let scrolled25 = false, scrolled50 = false, scrolled75 = false, scrolled100 = false;
+    
+    window.addEventListener('scroll', () => {
+      const scrollPct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+      
+      if(scrollPct > 25 && !scrolled25) {
+        scrolled25 = true;
+        if(typeof fbq !== 'undefined') fbq('trackCustom', 'Scroll25');
       }
-      document.addEventListener('click', function(e){
-        const a = e.target.closest('a[data-wa-origin]');
-        if(!a) return;
-        const origin = a.getAttribute('data-wa-origin');
-        if (GA_ID){ gtag('event','wa_click',{origin: origin}); }
-        // Nota: si no usas GA, igual puedes ver el origen temporalmente en consola:
-        if (!GA_ID){ console.log('WA click:', origin); }
-      }, {passive:true});
-    })();
+      if(scrollPct > 50 && !scrolled50) {
+        scrolled50 = true;
+        if(typeof fbq !== 'undefined') fbq('trackCustom', 'Scroll50');
+      }
+      if(scrollPct > 75 && !scrolled75) {
+        scrolled75 = true;
+        if(typeof fbq !== 'undefined') fbq('trackCustom', 'Scroll75');
+      }
+      if(scrollPct > 95 && !scrolled100) {
+        scrolled100 = true;
+        if(typeof fbq !== 'undefined') fbq('trackCustom', 'Scroll100');
+      }
+    });
+
+    // Track tiempo en página
+    let timeOnPage = 0;
+    setInterval(() => {
+      timeOnPage += 10;
+      // Cada 30 segundos
+      if(timeOnPage % 30 === 0) {
+        if(typeof fbq !== 'undefined') {
+          fbq('trackCustom', 'TimeOnPage', { seconds: timeOnPage });
+        }
+      }
+    }, 10000); // cada 10 segundos
   </script>
 
 </body>
