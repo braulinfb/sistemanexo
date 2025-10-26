@@ -19,9 +19,9 @@
   <meta name="twitter:description" content="Genera mensajes calificados diarios con Meta Ads + WhatsApp" />
   <meta name="twitter:image" content="https://tudominio.com/assets/img/braulin-betancourt-1200.jpg" />
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-  <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+  <!-- Favicon - SVG con iniciales BFB -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%230b0b0b'/><rect x='8' y='8' width='84' height='84' rx='12' fill='none' stroke='%23D4AF37' stroke-width='2'/><text x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='800' text-anchor='middle' dominant-baseline='central' fill='%23D4AF37'>BFB</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23D4AF37'/><text x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='800' text-anchor='middle' dominant-baseline='central' fill='%23111'>BFB</text></svg>">
   
   <!-- Meta Pixel - REEMPLAZA TU_PIXEL_ID -->
   <script>
@@ -37,15 +37,6 @@
     fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=TU_PIXEL_ID&ev=PageView&noscript=1" /></noscript>
-  
-  <!-- Google Analytics (opcional) - REEMPLAZA G-XXXXXXXX -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXX');
-  </script> -->
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -105,6 +96,60 @@
     .grid-3{grid-template-columns:repeat(3,1fr)}
     .grid-2{grid-template-columns:repeat(2,1fr)}
     
+    /* IMAGE CONTAINERS */
+    .img-container{position:relative;overflow:hidden;border-radius:var(--radius);border:1px solid rgba(255,255,255,.12)}
+    .img-container img{width:100%;height:100%;object-fit:cover;display:block}
+    
+    /* COLLAGE DE IMÁGENES - MEJORADO PARA MÓVIL */
+    .img-collage{display:grid;gap:12px;grid-template-columns:1fr;grid-template-rows:auto auto}
+    .img-collage .img-main{grid-column:1;grid-row:1}
+    .img-collage .img-secondary{grid-column:1;grid-row:2}
+    
+    @media (min-width: 640px) {
+      .img-collage{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:200px 160px;
+      }
+      .img-collage .img-main{
+        grid-column:1 / -1;
+        grid-row:1;
+      }
+      .img-collage .img-secondary{
+        grid-column:1;
+        grid-row:2;
+      }
+      .img-collage .img-tertiary{
+        grid-column:2;
+        grid-row:2;
+        display:block !important;
+      }
+    }
+    
+    @media (min-width: 920px){
+      .img-collage{
+        grid-template-columns:1fr;
+        grid-template-rows:auto auto;
+      }
+      .img-collage .img-main{
+        grid-column:1;
+        grid-row:1;
+      }
+      .img-collage .img-secondary{
+        grid-column:1;
+        grid-row:2;
+      }
+      .img-collage .img-tertiary{
+        display:none !important;
+      }
+    }
+    
+    /* Ocultar segunda imagen en móvil pequeño */
+    .hide-mobile{display:none}
+    
+    @media (min-width: 640px){
+      .hide-mobile{display:block}
+    }
+    
     @media (max-width: 920px){
       .hero-wrap{grid-template-columns:1fr}
       .grid-3{grid-template-columns:1fr}
@@ -122,10 +167,6 @@
     .muted{color:var(--muted)}
     .accent{color:var(--gold)}
     .divider{height:1px;background:linear-gradient(90deg, transparent, rgba(212,175,55,.45), transparent);margin:26px 0}
-    
-    /* IMAGE CONTAINERS */
-    .img-container{position:relative;overflow:hidden;border-radius:var(--radius);border:1px solid rgba(255,255,255,.12)}
-    .img-container img{width:100%;height:100%;object-fit:cover;display:block}
     
     /* TESTIMONIOS */
     .testi{display:grid;gap:18px}
@@ -420,7 +461,7 @@
       </div>
     </section>
 
-    <!-- BLOQUEOS / SUSPENSIONES -->
+    <!-- BLOQUEOS / SUSPENSIONES - MEJORADO PARA MÓVIL -->
     <section aria-labelledby="bloqueos">
       <div class="container">
         <div class="grid grid-2">
@@ -457,8 +498,9 @@
             </div>
           </div>
           
-          <div style="display:grid;gap:12px">
-            <picture class="img-container">
+          <!-- IMÁGENES MEJORADAS: Solo UNA en móvil pequeño -->
+          <div class="img-collage">
+            <picture class="img-container img-main">
               <source srcset="assets/img/office-team-1200.webp" type="image/webp">
               <img loading="lazy" 
                    src="assets/img/office-team-1200.jpg" 
@@ -466,7 +508,9 @@
                    width="1200" 
                    height="800" />
             </picture>
-            <picture class="img-container">
+            
+            <!-- Segunda imagen: solo visible en pantallas medianas+ -->
+            <picture class="img-container img-secondary hide-mobile">
               <source srcset="assets/img/local-shop-1200.webp" type="image/webp">
               <img loading="lazy" 
                    src="assets/img/local-shop-1200.jpg" 
@@ -571,7 +615,7 @@
                    alt="Braulin Fernando Betancourt - Especialista en Meta Ads y WhatsApp Marketing"
                    width="1200" 
                    height="1200"
-                   style="border-radius:14px;border:1px solid rgba(255,255,255,.12);object-fit:cover;width:100%;height:auto" />
+                   style="border-radius:14px;object-fit:cover;width:100%;height:auto" />
             </picture>
           </div>
         </div>
