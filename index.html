@@ -3,816 +3,140 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sistema RADAR™ - Recibe 15-30 Mensajes Diarios de Clientes Listos para Comprar</title>
-<meta name="description" content="Meta Ads + WhatsApp configurados profesionalmente. Primeros resultados en 24-48h. Sin software caro ni automatización forzada." />
-
-<!-- Open Graph -->
-<meta property="og:title" content="Sistema RADAR™ - Recibe Mensajes Diarios de Clientes" />
-<meta property="og:description" content="Setup completo en 5-7 días. Promedio 2.8x ROI. Sin costos ocultos." />
-<meta property="og:image" content="https://braulinfb.github.io/sistemaradar/assets/img/braulin-betancourt-1200.jpg" />
-<meta property="og:type" content="website" />
-
-<!-- Favicon -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%230b0b0b'/><rect x='8' y='8' width='84' height='84' rx='12' fill='none' stroke='%23D4AF37' stroke-width='2'/><text x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='800' text-anchor='middle' dominant-baseline='central' fill='%23D4AF37'>R</text></svg>">
-
-<!-- Meta Pixel -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'TU_PIXEL_ID');
-fbq('track', 'PageView');
-</script>
+<title>Sistema RADAR™ - Recibe 15-30 Mensajes Diarios</title>
+<meta name="description" content="Meta Ads + WhatsApp configurados profesionalmente. Primeros resultados en 24-48h." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
 <style>
-:root{
---black:#0a0a0a; --dark:#111111; --white:#ffffff; --gray:#94a3b8;
---gold:#fbbf24; --gold-hover:#f59e0b; 
---red:#ef4444; --green:#10b981;
---radius:16px; --shadow:0 20px 60px rgba(0,0,0,.4);
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:#000;color:#fff;overflow-x:hidden}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:0 60px;gap:80px;position:relative}
+.hero-left{max-width:650px}
+.hero-right{position:relative}
+.hero-right img{width:100%;border-radius:24px;box-shadow:0 40px 80px rgba(0,0,0,.6)}
+.roi-badge{position:absolute;bottom:40px;left:40px;background:rgba(212,175,55,.95);
+backdrop-filter:blur(10px);border:2px solid rgba(212,175,55,.3);
+padding:20px 32px;border-radius:16px;display:flex;align-items:center;gap:16px}
+.roi-icon{width:48px;height:48px;background:#000;border-radius:12px;display:grid;place-items:center;font-size:24px}
+.roi-text{display:flex;flex-direction:column}
+.roi-number{font-size:2.5rem;font-weight:900;color:#000;line-height:1}
+.roi-label{font-size:.9rem;color:#000;opacity:.8;font-weight:600}
+
+h1{font-size:4rem;font-weight:900;line-height:1.1;margin-bottom:24px}
+h1 .white{color:#fff}
+h1 .gold{color:#D4AF37}
+.lead{font-size:1.15rem;color:#9ca3af;line-height:1.7;margin-bottom:32px}
+.checkmarks{display:flex;flex-direction:column;gap:12px;margin-bottom:40px}
+.check-item{display:flex;align-items:center;gap:12px;font-size:1rem}
+.check-icon{width:28px;height:28px;background:#D4AF37;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
+.check-icon::after{content:'✓';color:#000;font-weight:900;font-size:16px}
+.check-text{color:#e5e7eb}
+.check-text strong{color:#fff;font-weight:700}
+
+.cta-buttons{display:flex;gap:16px;margin-bottom:32px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
+padding:18px 36px;border-radius:12px;font-weight:700;font-size:1.05rem;
+transition:all .3s;cursor:pointer;border:none;text-decoration:none}
+.btn-primary{background:#D4AF37;color:#000;box-shadow:0 8px 24px rgba(212,175,55,.3)}
+.btn-primary:hover{background:#c9a02e;transform:translateY(-2px)}
+.btn-secondary{background:transparent;color:#D4AF37;border:2px solid #D4AF37}
+.btn-secondary:hover{background:rgba(212,175,55,.1)}
+
+.footer-badges{display:flex;gap:20px;flex-wrap:wrap}
+.footer-badge{display:flex;align-items:center;gap:8px;font-size:.95rem;color:#9ca3af}
+.footer-badge-icon{width:24px;height:24px;background:#D4AF37;border-radius:50%;display:grid;place-items:center;font-size:12px;color:#000;font-weight:900}
+
+.small-note{font-size:.85rem;color:#6b7280;margin-top:16px;font-style:italic}
+
+@media (max-width:1200px){
+.hero{grid-template-columns:1fr;padding:60px 30px;gap:40px;min-height:auto}
+.hero-left{max-width:100%}
+h1{font-size:2.5rem}
+.roi-badge{left:20px;bottom:20px;padding:16px 24px}
+.roi-number{font-size:2rem}
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;
-background:var(--black);color:var(--white);line-height:1.6;overflow-x:hidden}
-.container{max-width:1200px;margin:0 auto;padding:0 24px}
-img{max-width:100%;display:block}
-a{text-decoration:none;color:inherit}
-
-/* BUTTONS */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
-padding:16px 32px;border-radius:999px;font-weight:700;font-size:1.05rem;
-transition:all .3s;cursor:pointer;border:none}
-.btn-primary{background:var(--gold);color:var(--black);box-shadow:0 8px 24px rgba(251,191,36,.3)}
-.btn-primary:hover{background:var(--gold-hover);transform:translateY(-2px);box-shadow:0 12px 32px rgba(251,191,36,.4)}
-.btn-secondary{background:rgba(255,255,255,.08);color:var(--white);border:1px solid rgba(255,255,255,.2)}
-.btn-secondary:hover{background:rgba(255,255,255,.12)}
-
-/* BADGES */
-.badge{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;
-border-radius:999px;font-size:.875rem;font-weight:600;
-background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.3);color:var(--gold)}
-.badge-red{background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.3);color:var(--red)}
-.badge-green{background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.3);color:var(--green)}
-
-/* CARDS */
-.card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
-border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:32px;
-box-shadow:var(--shadow);transition:.3s}
-.card:hover{transform:translateY(-4px);border-color:rgba(251,191,36,.3)}
-.card h3{font-size:1.35rem;margin-bottom:12px;font-weight:700}
-.card p{color:var(--gray);line-height:1.7}
-
-/* HERO */
-.hero{padding:80px 0 60px;text-align:center;position:relative;
-background:radial-gradient(ellipse 80% 50% at 50% -20%,rgba(251,191,36,.15),transparent)}
-.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:800;line-height:1.1;margin-bottom:24px;
-background:linear-gradient(135deg,#fff,#fbbf24);-webkit-background-clip:text;
--webkit-text-fill-color:transparent;background-clip:text}
-.hero .lead{font-size:clamp(1.1rem,2.5vw,1.3rem);color:var(--gray);max-width:800px;
-margin:0 auto 32px;line-height:1.6}
-.hero-badges{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
-.hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
-.hero-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-gap:16px;max-width:700px;margin:40px auto 0}
-.stat{text-align:center;padding:20px;background:rgba(255,255,255,.04);
-border:1px solid rgba(255,255,255,.1);border-radius:12px}
-.stat-number{font-size:2.5rem;font-weight:800;color:var(--gold);line-height:1}
-.stat-label{font-size:.85rem;color:var(--gray);margin-top:6px}
-
-/* SECTIONS */
-section{padding:80px 0}
-.section-header{text-align:center;max-width:700px;margin:0 auto 48px}
-.section-header h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:16px}
-.section-header p{color:var(--gray);font-size:1.1rem}
-.eyebrow{font-size:.875rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;
-color:var(--gold);margin-bottom:12px;display:block}
-
-.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:32px}
-
-/* PROBLEMA */
-.problema .grid-3 .card{text-align:center}
-.problema .card-icon{width:64px;height:64px;margin:0 auto 20px;
-background:linear-gradient(135deg,rgba(239,68,68,.2),rgba(239,68,68,.05));
-border:1px solid rgba(239,68,68,.3);border-radius:16px;display:grid;place-items:center;
-font-size:2rem}
-
-/* SOLUCIÓN */
-.solucion{background:var(--dark)}
-.solucion .card-icon{width:64px;height:64px;margin-bottom:20px;
-background:linear-gradient(135deg,rgba(251,191,36,.2),rgba(251,191,36,.05));
-border:1px solid rgba(251,191,36,.3);border-radius:16px;display:grid;place-items:center;
-font-size:2rem}
-
-/* PROCESO */
-.proceso .step{counter-increment:step;position:relative;padding-left:80px}
-.proceso .step::before{content:counter(step,decimal-leading-zero);position:absolute;
-left:0;top:0;width:56px;height:56px;background:var(--gold);color:var(--black);
-border-radius:12px;display:grid;place-items:center;font-size:1.5rem;font-weight:800}
-.proceso .grid-2{counter-reset:step}
-
-/* ROLES */
-.roles .card ul{list-style:none;padding:0;margin-top:16px}
-.roles .card ul li{padding:10px 0;padding-left:32px;position:relative;color:var(--gray)}
-.roles .card ul li::before{content:"✓";position:absolute;left:0;color:var(--gold);
-font-weight:800;font-size:1.2rem}
-
-/* MODOS */
-.modos{background:var(--dark)}
-.mode-tabs{display:flex;gap:12px;justify-content:center;margin-bottom:32px;flex-wrap:wrap}
-.mode-tab{padding:12px 24px;border-radius:999px;background:rgba(255,255,255,.06);
-border:1px solid rgba(255,255,255,.15);font-weight:700;cursor:pointer;transition:.3s}
-.mode-tab.active{background:var(--gold);color:var(--black);border-color:var(--gold)}
-.mode-panel{display:none}
-.mode-panel.active{display:block}
-.mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto}
-
-/* CASO ESTUDIO */
-.caso{background:linear-gradient(135deg,rgba(251,191,36,.08),rgba(251,191,36,.02));
-border:2px solid rgba(251,191,36,.2);border-radius:var(--radius);padding:40px;
-max-width:900px;margin:48px auto}
-.caso-header{display:flex;align-items:center;gap:16px;margin-bottom:24px}
-.caso-badge{background:var(--gold);color:var(--black);padding:8px 16px;
-border-radius:8px;font-weight:800;font-size:.85rem}
-.caso-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:24px 0}
-.caso-stat{text-align:center}
-.caso-stat-num{font-size:2rem;font-weight:800;color:var(--gold)}
-.caso-stat-label{font-size:.875rem;color:var(--gray)}
-.caso blockquote{border-left:3px solid var(--gold);padding-left:20px;
-font-style:italic;color:var(--gray);margin:24px 0}
-
-/* BLOQUEOS */
-.bloqueos .grid-2{grid-template-columns:repeat(2,1fr)}
-.soporte-card{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.2)}
-
-/* SOBRE */
-.sobre .profile{display:flex;align-items:center;gap:32px}
-.sobre .profile-img{width:200px;height:200px;border-radius:50%;border:3px solid var(--gold);
-object-fit:cover}
-.sobre .badges-list{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
-
-/* FAQ */
-details{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);
-border-radius:12px;padding:20px;margin-bottom:16px;cursor:pointer}
-details[open]{background:rgba(255,255,255,.06);border-color:rgba(251,191,36,.3)}
-summary{font-weight:700;cursor:pointer;user-select:none;display:flex;
-align-items:center;justify-content:space-between}
-summary::after{content:"▼";font-size:.85rem;color:var(--gold);transition:.3s}
-details[open] summary::after{transform:rotate(180deg)}
-details p{margin-top:16px;color:var(--gray);line-height:1.7}
-
-/* CTA FINAL */
-.cta-final{background:linear-gradient(135deg,rgba(251,191,36,.12),transparent);
-text-align:center;padding:100px 0}
-.cta-final h2{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;margin-bottom:16px}
-.cta-final .price{display:inline-flex;align-items:center;gap:12px;margin:24px 0;
-font-size:1.8rem;font-weight:800}
-.cta-final .price-old{text-decoration:line-through;opacity:.5;font-size:1.3rem}
-.cta-final .price-new{color:var(--gold)}
-
-/* FOOTER */
-footer{background:var(--dark);padding:60px 0 40px;border-top:1px solid rgba(255,255,255,.1)}
-.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;
-margin-bottom:32px}
-.footer-col h4{font-size:1.1rem;margin-bottom:16px;color:var(--gold)}
-.footer-col ul{list-style:none}
-.footer-col ul li{margin-bottom:10px}
-.footer-col ul li a{color:var(--gray);transition:.3s}
-.footer-col ul li a:hover{color:var(--gold)}
-.footer-bottom{text-align:center;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);
-color:var(--gray);font-size:.9rem}
-
-/* FLOAT BUTTON */
-.float-wa{position:fixed;bottom:24px;right:24px;z-index:1000;
-background:var(--gold);color:var(--black);padding:16px 24px;border-radius:999px;
-font-weight:800;box-shadow:0 8px 24px rgba(251,191,36,.4);display:flex;align-items:center;
-gap:8px;transition:.3s}
-.float-wa:hover{transform:scale(1.05);box-shadow:0 12px 32px rgba(251,191,36,.5)}
-.float-wa svg{width:24px;height:24px}
-
-/* RESPONSIVE */
-@media (max-width:768px){
-.hero{padding:60px 0 40px}
-.hero h1{font-size:2rem}
-.grid-2,.mode-grid{grid-template-columns:1fr}
-.caso-stats{grid-template-columns:repeat(2,1fr)}
-.sobre .profile{flex-direction:column;text-align:center}
-.float-wa span{display:none}
-}
-
-.small{font-size:.875rem;color:var(--gray);margin-top:8px}
-.center{text-align:center}
-.mb-16{margin-bottom:16px}
-.mb-24{margin-bottom:24px}
-.mb-32{margin-bottom:32px}
-.mt-24{margin-top:24px}
 </style>
 </head>
 <body>
 
-<!-- HERO -->
 <section class="hero">
-<div class="container">
-<h1>Recibe 15-30 Mensajes Diarios de Clientes Listos para Comprar</h1>
+<div class="hero-left">
+<h1>
+<span class="white">Recibe </span><span class="gold">15-30<br>Mensajes Diarios</span><br>
+<span class="white">de Clientes Listos<br>para Comprar</span>
+</h1>
+
 <p class="lead">Meta Ads + WhatsApp configurados profesionalmente. Primeros resultados en 24-48h. Sin software caro ni automatización forzada.</p>
-<div class="hero-badges">
-<span class="badge">✓ Setup completo en 5-7 días, sin complicaciones técnicas</span>
-<span class="badge">✓ Promedio 2.8x ROI en campañas optimizadas*</span>
-<span class="badge">✓ Asesoría con IA Pro incluida (12 meses) - sujeto a disponibilidad</span>
+
+<div class="checkmarks">
+<div class="check-item">
+<span class="check-icon"></span>
+<span class="check-text"><strong>Setup completo en 5-7 días</strong>, sin complicaciones técnicas</span>
 </div>
-<div class="hero-cta">
-<a href="https://wa.me/573148676490?text=Hola%2C%20quiero%20implementar%20el%20Sistema%20RADAR%E2%84%A2" class="btn btn-primary cta-btn" target="_blank" rel="noopener">
+<div class="check-item">
+<span class="check-icon"></span>
+<span class="check-text"><strong>Promedio 2.8x ROI</strong> en campañas optimizadas*</span>
+</div>
+<div class="check-item">
+<span class="check-icon"></span>
+<span class="check-text"><strong>Asesoría con IA Pro incluida (12 meses)</strong> — sujeto a disponibilidad</span>
+</div>
+</div>
+
+<div class="cta-buttons">
+<a href="https://wa.me/573148676490?text=Hola%2C%20quiero%20implementar%20el%20Sistema%20RADAR%E2%84%A2" class="btn btn-primary" target="_blank" rel="noopener">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 2C6.5 2 2 6.2 2 11.5c0 1.9.6 3.7 1.6 5.2L2 22l5.5-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.2 10-9.3C22.3 6.2 17.7 2 12 2Z"/>
+</svg>
 Quiero RADAR™ Ahora
 </a>
-<a href="#demo" class="btn btn-secondary">▶ Ver Demo 45s</a>
-</div>
-<div class="hero-badges">
-<span class="badge-green">Respondo en <2 horas</span>
-<span class="badge-green">Atención LatAm</span>
-<span class="badge-green">Sin costos ocultos</span>
-</div>
-<div class="hero-stats">
-<div class="stat">
-<div class="stat-number">15-30</div>
-<div class="stat-label">Mensajes Diarios</div>
-<p class="small">Con intención de compra real</p>
-</div>
-<div class="stat">
-<div class="stat-number">2.8x</div>
-<div class="stat-label">ROI Promedio</div>
-<p class="small">En campañas optimizadas*</p>
-</div>
-<div class="stat">
-<div class="stat-number">5-7</div>
-<div class="stat-label">Días de Setup</div>
-<p class="small">Todo configurado y listo</p>
-</div>
-<div class="stat">
-<div class="stat-number">24-48h</div>
-<div class="stat-label">Primeros Resultados</div>
-<p class="small">Mensajes desde el inicio</p>
-</div>
-</div>
-<p class="small center" style="margin-top:24px">*Resultados variables según industria y presupuesto. Inversión en Ads no incluida</p>
-</div>
-</section>
-
-<!-- PROBLEMA -->
-<section class="problema" id="problema">
-<div class="container">
-<div class="section-header">
-<span class="eyebrow">¿Te Suena Familiar?</span>
-<h2>Estos son los problemas más comunes que enfrentan los negocios con publicidad digital</h2>
-</div>
-<div class="grid-3">
-<div class="card">
-<div class="card-icon">💸</div>
-<h3>Presupuesto Desperdiciado</h3>
-<p>Gastas en anuncios pero recibes clics sin intención, leads fríos que nunca compran</p>
-</div>
-<div class="card">
-<div class="card-icon">🤖</div>
-<h3>Bots Caros e Ineficaces</h3>
-<p>Pagas $50-$200/mes por chatbots que responden mal y espantan a tus clientes reales</p>
-</div>
-<div class="card">
-<div class="card-icon">🚫</div>
-<h3>Bloqueos y Rechazos</h3>
-<p>Tu cuenta publicitaria bloqueada sin explicación, pierdes días sin vender</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- SOLUCIÓN -->
-<section class="solucion" id="solucion">
-<div class="container">
-<div class="section-header">
-<span class="eyebrow">La Solución</span>
-<h2>Sistema RADAR™ Listo para Usar</h2>
-<p>Todo lo que necesitas para recibir mensajes de WhatsApp de clientes listos para comprar, sin complicaciones</p>
-</div>
-<div class="grid-3">
-<div class="card">
-<div class="card-icon">⚙️</div>
-<h3>Configuración Pro</h3>
-<p>Pixel de Meta, Business Manager, catálogo de productos configurado desde día 1</p>
-</div>
-<div class="card">
-<div class="card-icon">🎯</div>
-<h3>Campañas que Convierten</h3>
-<p>3 campañas base a WhatsApp + 3 anuncios iniciales con tu material</p>
-</div>
-<div class="card">
-<div class="card-icon">💬</div>
-<h3>Proceso de Ventas en WhatsApp</h3>
-<p>Respuestas rápidas, etiquetas, filtros de leads - sin bots obligatorios</p>
-</div>
-<div class="card">
-<div class="card-icon">🛡️</div>
-<h3>Prevención de Bloqueos</h3>
-<p>Configuración técnica que evita rechazos de anuncios y suspensiones</p>
-</div>
-<div class="card">
-<div class="card-icon">🤖</div>
-<h3>Asesoría Creativos con IA</h3>
-<p>Google Veo 3 incluido 12 meses (~50 videos, 2TB) - sujeto a disponibilidad/región</p>
-</div>
-<div class="card">
-<div class="card-icon">📊</div>
-<h3>Medición de Retorno</h3>
-<p>Dashboards simples para ver cuánto gastas vs. cuánto vendes, en tiempo real</p>
-</div>
-</div>
-<div class="center mt-24">
-<a href="https://wa.me/573148676490?text=Quiero%20implementar%20Sistema%20RADAR%E2%84%A2" class="btn btn-primary cta-btn" target="_blank" rel="noopener">Implementar Sistema RADAR™</a>
-<p class="small mt-24">Setup $97→$67 hoy | Gestión opcional $29/mes</p>
-</div>
-</div>
-</section>
-
-<!-- PROCESO -->
-<section class="proceso" id="proceso">
-<div class="container">
-<div class="section-header">
-<span class="eyebrow">Cómo Funciona</span>
-<h2>Cómo Funciona en 4 Pasos</h2>
-<p>Un proceso simple y claro para que empieces a recibir mensajes de clientes en días, no meses</p>
-</div>
-<div class="grid-2">
-<div class="card step">
-<h3>Diagnóstico Express (30 min)</h3>
-<p>Revisamos tu negocio, público objetivo, material actual y definimos la estrategia de campaña más efectiva</p>
-<ul style="list-style:none;padding:0;margin-top:12px">
-<li style="color:var(--gray)">✓ Análisis de tu nicho y competencia</li>
-<li style="color:var(--gray)">✓ Definición de audiencias objetivo</li>
-</ul>
-</div>
-<div class="card step">
-<h3>Creativos + Lanzamiento (3-5 días)</h3>
-<p>Creamos 3 anuncios iniciales con tu material, configuramos pixel, campañas y lanzamos todo en Meta</p>
-<ul style="list-style:none;padding:0;margin-top:12px">
-<li style="color:var(--gray)">✓ 3 campañas base a WhatsApp</li>
-<li style="color:var(--gray)">✓ Asesoría con IA para creativos</li>
-</ul>
-</div>
-<div class="card step">
-<h3>Optimización + Capacitación (24-48h)</h3>
-<p>Te enseñamos a responder en WhatsApp, cerrar ventas y ajustamos campañas según los primeros datos</p>
-<ul style="list-style:none;padding:0;margin-top:12px">
-<li style="color:var(--gray)">✓ Guion de ventas por WhatsApp</li>
-<li style="color:var(--gray)">✓ Primeros ajustes de optimización</li>
-</ul>
-</div>
-<div class="card step">
-<h3>Soporte Puntual (Opcional)</h3>
-<p>Si quieres que gestionemos las campañas mensualmente, optimizando anuncios y creativos: $29/mes</p>
-<ul style="list-style:none;padding:0;margin-top:12px">
-<li style="color:var(--gray)">✓ Optimización continua</li>
-<li style="color:var(--gray)">✓ Nuevos creativos mensuales</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ROLES -->
-<section class="roles" id="roles">
-<div class="container">
-<div class="section-header">
-<span class="eyebrow">Claridad Total</span>
-<h2>¿Qué Pongo Yo y Qué Pones Tú?</h2>
-</div>
-<div class="grid-2">
-<div class="card">
-<h3>Tú Pones</h3>
-<ul>
-<li>Presupuesto de Ads (mín. $5-10/día)</li>
-<li>Fotos/videos de tu producto/servicio</li>
-<li>Responder mensajes de WhatsApp</li>
-<li>Cerrar las ventas con tus clientes</li>
-</ul>
-</div>
-<div class="card">
-<h3>Yo Pongo</h3>
-<ul>
-<li>Configuración técnica completa (Pixel, Business Manager, catálogo)</li>
-<li>3 campañas + 3 anuncios iniciales</li>
-<li>Asesoría creativos con IA (12 meses)</li>
-<li>Capacitación para cerrar ventas</li>
-<li>Soporte técnico y prevención de bloqueos</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-
-<!-- MODOS -->
-<section class="modos" id="modos">
-<div class="container">
-<div class="section-header">
-<span class="eyebrow">Tú Decides</span>
-<h2>Modos de Operación: Tú Decides Cómo Trabajar</h2>
-<p>Empieza con el modo manual y escala cuando estés listo - sin presión, sin costos extra obligatorios</p>
-</div>
-<div class="mode-tabs">
-<button class="mode-tab active" data-mode="base">Modo Base - Manual</button>
-<button class="mode-tab" data-mode="avanzado">Modo Avanzado - IA</button>
-</div>
-<div class="mode-panel active" id="mode-base">
-<div class="mode-grid">
-<div class="card">
-<span class="badge-green mb-16">Manual, Sin Costo Extra</span>
-<h3>Modo Base</h3>
-<p class="mb-16">Perfecto para comenzar: tú respondes cada mensaje manualmente, cierras ventas con tu toque personal</p>
-<ul style="list-style:none;padding:0">
-<li style="color:var(--gray);margin-bottom:8px">✓ Recibe 15-30 mensajes diarios en tu WhatsApp</li>
-<li style="color:var(--gray);margin-bottom:8px">✓ Respuestas rápidas y etiquetas configuradas</li>
-<li style="color:var(--gray);margin-bottom:8px">✓ Guion de ventas probado incluido</li>
-<li style="color:var(--gray);margin-bottom:8px">✓ Control total de cada conversación</li>
-</ul>
-<p class="small mt-24"><strong>Ideal para:</strong> negocios personalizados, tickets altos, servicios consultivos</p>
-</div>
-<div class="card">
-<a href="https://wa.me/573148676490?text=Quiero%20empezar%20en%20Modo%20Base" class="btn btn-primary" target="_blank" rel="noopener" style="width:100%;margin-top:auto">Empezar en Modo Base</a>
-</div>
-</div>
-</div>
-<div class="mode-panel" id="mode-avanzado">
-<div class="mode-grid">
-<div class="card">
-<span class="badge mb-16">Automatizado con IA</span>
-<h3>Modo Avanzado</h3>
-<p class="mb-16">Para escalar: automatiza respuestas, califica leads con IA, integra con tu CRM - cuando lo necesites</p>
-<ul style="list-style:none;padding:0">
-<li style="color:var(--gray);margin-bottom:8px">✓ ChatGPT API para respuestas inteligentes 24/7</li>
-<li style="color:var(--gray);margin-bottom:8px">✓ Calificación automática de leads (hot/warm/cold)</li>
-<li style="color:var(--gray);margin-bottom:8px">✓ Integración con n8n para workflows personalizados</li>
-<li style="color:var(--gray);margin-bottom:8px">✓ WhatsApp Cloud API oficial (+ confiable)</li>
-</ul>
-<p class="small mt-24"><strong>Ideal para:</strong> alto volumen (50+ mensajes/día)</p>
-<span class="badge-red mt-24">Setup adicional disponible cuando quieras - OPCIONAL</span>
-</div>
-<div class="card">
-<a href="https://wa.me/573148676490?text=Quiero%20consultar%20Modo%20Avanzado" class="btn btn-secondary" target="_blank" rel="noopener" style="width:100%;margin-top:auto">Consultar Modo Avanzado</a>
-</div>
-</div>
-</div>
-<p class="center small mt-32"><strong>Recomendación:</strong> Empieza en Modo Base para validar tu mercado, luego escala al Modo Avanzado cuando tengas flujo constante de mensajes</p>
-</div>
-</section>
-
-<!-- CASO ESTUDIO -->
-<section id="caso">
-<div class="container">
-<div class="section-header">
-<span class="eyebrow">Números Reales</span>
-<h2>Números Reales de Negocios Reales</h2>
-<p>Estos son los resultados promedio que están logrando negocios con Sistema RADAR™ activo</p>
-</div>
-<div class="caso">
-<div class="caso-header">
-<span class="caso-badge">CASO DE ESTUDIO</span>
-<div>
-<h3 style="margin:0">Estudio de Belleza en Medellín</h3>
-<p class="small">Negocio local especializado en tratamientos capilares y estética facial</p>
-</div>
-</div>
-<div class="caso-stats">
-<div class="caso-stat">
-<div class="caso-stat-num">18-22</div>
-<div class="caso-stat-label">Consultas diarias</div>
-</div>
-<div class="caso-stat">
-<div class="caso-stat-num">~7.5x</div>
-<div class="caso-stat-label">ROI logrado</div>
-</div>
-<div class="caso-stat">
-<div class="caso-stat-num">$90</div>
-<div class="caso-stat-label">Gasto mensual Ads</div>
-</div>
-<div class="caso-stat">
-<div class="caso-stat-num">3</div>
-<div class="caso-stat-label">Meses activo</div>
-</div>
-</div>
-<blockquote>"Antes pagábamos anuncios sin resultados claros. Con RADAR™ ahora sabemos exactamente cuánto invertimos y cuánto generamos. Los mensajes llegan listos para agendar citas."</blockquote>
-<ul style="list-style:none;padding:0;color:var(--gray)">
-<li>✓ Setup inicial: 6 días</li>
-<li>✓ Primeros mensajes: 36 horas después del lanzamiento</li>
-<li>✓ Modo Base (manual) - sin automatización</li>
-</ul>
-<p class="small mt-24">Los resultados varían según industria, presupuesto publicitario, calidad del producto/servicio y capacidad de cierre. Los números presentados son ejemplos reales pero no garantizan resultados idénticos en todos los casos.</p>
-</div>
-</div>
-</section>
-
-<!-- BLOQUEOS -->
-<section class="bloqueos" style="background:var(--dark)" id="bloqueos">
-<div class="container">
-<div class="section-header">
-<span class="eyebrow">Problema Común</span>
-<h2>¿Problemas con Meta Ads?</h2>
-<p>Bloqueos, rechazos, verificaciones... Si Meta te está complicando la vida, tengo la solución</p>
-</div>
-<div class="grid-2">
-<div class="card">
-<h3>🚫 Cuenta Bloqueada</h3>
-<p>Tu Business Manager deshabilitado sin previo aviso</p>
-</div>
-<div class="card">
-<h3>💳 Pagos Rechazados</h3>
-<p>Tu tarjeta no pasa o Meta no acepta tu método de pago</p>
-</div>
-<div class="card">
-<h3>⛔ Anuncios Rechazados</h3>
-<p>Cada anuncio que subes es rechazado por "políticas"</p>
-</div>
-<div class="card">
-<h3>📋 Verificación Pendiente</h3>
-<p>Te piden documentos que no sabes cómo enviar</p>
-</div>
-</div>
-<div class="card soporte-card mt-32" style="max-width:700px;margin-left:auto;margin-right:auto">
-<h3 style="text-align:center;margin-bottom:16px">SOPORTE ESPECIALIZADO</h3>
-<h2 style="text-align:center;margin-bottom:24px">Te Ayudo a Recuperar y Proteger tu Cuenta</h2>
-<p style="text-align:center;margin-bottom:24px">Con años de experiencia navegando las políticas de Meta, puedo ayudarte a:</p>
-<ul style="list-style:none;padding:0;text-align:center">
-<li style="margin-bottom:8px">✓ Recuperar cuentas bloqueadas</li>
-<li style="margin-bottom:8px">✓ Configurar métodos de pago válidos</li>
-<li style="margin-bottom:8px">✓ Pasar verificación de negocio</li>
-<li style="margin-bottom:8px">✓ Prevenir futuros bloqueos</li>
-</ul>
-<div class="center mt-24">
-<a href="https://wa.me/573148676490?text=Necesito%20ayuda%20urgente%20con%20mi%20cuenta%20de%20Meta" class="btn btn-primary cta-btn" target="_blank" rel="noopener">Pedir Ayuda Urgente</a>
-<p class="small mt-24">Respondo en menos de 2 horas. Evaluación sin costo</p>
-</div>
-</div>
-<p class="center small mt-24">He ayudado a recuperar más de 30 cuentas publicitarias en el último año</p>
-</div>
-</section>
-
-<!-- BENEFICIOS -->
-<section id="beneficios">
-<div class="container">
-<div class="section-header">
-<span class="eyebrow">Lo que vas a notar</span>
-<h2>Beneficios del Sistema RADAR™</h2>
-<p>Más allá de los mensajes: cómo RADAR™ transforma tu negocio</p>
-</div>
-<div class="grid-3">
-<div class="card">
-<h3>⏰ Ahorra Tiempo Valioso</h3>
-<p>Olv ídate de perder horas investigando cómo configurar campañas. Todo viene listo, optimizado y probado. Tú solo cierras ventas.</p>
-</div>
-<div class="card">
-<h3>💰 Invierte con Confianza</h3>
-<p>Cada peso en Ads va directo a personas interesadas en tu producto. No más presupuesto quemado en clics vacíos o bots.</p>
-</div>
-<div class="card">
-<h3>📈 Escala a Tu Ritmo</h3>
-<p>Empieza manual, automatiza cuando quieras. Sin presión de comprar software caro desde el día 1. Creces cuando estés listo.</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- SOBRE -->
-<section class="sobre" style="background:var(--dark)" id="sobre">
-<div class="container">
-<div class="section-header">
-<span class="eyebrow">Sobre Mí</span>
-<h2>Soy Braulin Betancourt</h2>
-<p>Especialista en Meta Ads con más de 5 años ayudando a negocios LatAm a generar leads reales por WhatsApp.</p>
-</div>
-<div class="card">
-<p class="mb-16">He trabajado con más de <strong>100+ negocios</strong> en Colombia, México, Argentina y Chile - desde estudios de belleza hasta servicios profesionales.</p>
-<p class="mb-16">Mi enfoque es simple: <strong>resultados medibles en días, no teoría en meses</strong>. Configuración técnica impecable + estrategia de conversión directa = mensajes que se convierten en ventas.</p>
-<p class="mb-16">Desarrollé Sistema RADAR™ después de ver cómo mis clientes desperdiciaban presupuesto en bots caros y campañas mal configuradas. Ahora ese sistema está disponible para ti.</p>
-<div class="badges-list">
-<span class="badge">Meta Blueprint Certificado</span>
-<span class="badge">Especialista en Ads</span>
-<span class="badge">+$500k Invertidos</span>
-<span class="badge">100+ Clientes LatAm</span>
-<span class="badge">Soporte Directo</span>
-</div>
-<div class="center mt-32">
-<a href="https://wa.me/573148676490?text=Hola%20Braulin%2C%20quiero%20hablar%20contigo" class="btn btn-primary cta-btn" target="_blank" rel="noopener">Hablar con Braulin</a>
-</div>
-</div>
-</div>
-</section>
-
-<!-- FAQ -->
-<section id="faq">
-<div class="container">
-<div class="section-header">
-<span class="eyebrow">Preguntas Frecuentes</span>
-<h2>Todo lo que necesitas saber sobre Sistema RADAR™</h2>
-</div>
-<div style="max-width:800px;margin:0 auto">
-<details>
-<summary>¿Cuánto cuesta el Sistema RADAR™?</summary>
-<p><strong>Setup inicial:</strong> $97 USD (oferta hoy: $67)</p>
-<p>Incluye: configuración completa de Meta Ads + WhatsApp, 3 campañas base, 3 anuncios iniciales, capacitación de ventas, asesoría con IA Pro 12 meses (sujeto a disponibilidad).</p>
-<p><strong>Gestión mensual opcional:</strong> $29/mes para optimización continua y nuevos creativos.</p>
-<p class="small">*Inversión en Ads de Meta no incluida (presupuesto lo defines tú).</p>
-</details>
-
-<details>
-<summary>¿Necesito comprar bots o software adicional?</summary>
-<p>No. El Modo Base funciona con tu WhatsApp normal, respondiendo manualmente. Es lo más recomendado para empezar.</p>
-<p>Si más adelante quieres automatizar con IA (Modo Avanzado), te guío en el setup, pero es completamente opcional.</p>
-</details>
-
-<details>
-<summary>¿Cuánto tiempo tarda el setup?</summary>
-<p>5-7 días desde que confirmas el setup hasta que tus campañas están activas.</p>
-<p>Primeros mensajes: 24-48 horas después del lanzamiento.</p>
-</details>
-
-<details>
-<summary>¿Qué presupuesto de Ads necesito?</summary>
-<p>Mínimo recomendado: $5-10 USD por día ($150-300/mes).</p>
-<p>Con eso puedes validar tu mercado y generar 15-30 mensajes diarios. Si funciona, escalas el presupuesto.</p>
-<p>Inversión en Ads la pagas directamente a Meta, no a mí.</p>
-</details>
-
-<details>
-<summary>¿Funciona para cualquier tipo de negocio?</summary>
-<p><strong>Funciona mejor para:</strong></p>
-<ul>
-<li>Servicios locales (belleza, salud, reparaciones)</li>
-<li>Servicios profesionales (abogados, contadores, consultores)</li>
-<li>E-learning y formación</li>
-<li>Productos con ticket medio-alto que necesitan asesoría</li>
-</ul>
-<p><strong>No funciona para:</strong> Productos prohibidos por Meta, negocios ilegales, contenido adulto.</p>
-</details>
-
-<details>
-<summary>¿Garantizan resultados específicos?</summary>
-<p>No puedo garantizar un número exacto de ventas porque depende de:</p>
-<ul>
-<li>Tu capacidad de cierre en WhatsApp</li>
-<li>Calidad de tu producto/servicio</li>
-<li>Presupuesto que inviertas en Ads</li>
-<li>Competencia en tu nicho</li>
-</ul>
-<p>Lo que sí garantizo: configuración técnica impecable, campañas optimizadas, y primeros mensajes en 24-48h si sigues mis instrucciones.</p>
-</details>
-
-<details>
-<summary>¿Qué incluye la asesoría con IA Pro?</summary>
-<p>Acceso a herramientas de IA para crear creativos (ejemplo: Google Veo 3 para generar videos publicitarios).</p>
-<p>Incluye: hasta 1.000 créditos (~50 videos) y 2 TB de almacenamiento durante 12 meses.</p>
-<p class="small">*Sujeto a disponibilidad y región. Si no está disponible en tu país, busco alternativa similar.</p>
-</details>
-
-<details>
-<summary>¿Qué pasa si mi cuenta de Meta está bloqueada?</summary>
-<p>Puedo ayudarte a recuperarla o crear una nueva configurada correctamente.</p>
-<p>Envíame un mensaje con tu situación específica y te doy opciones sin costo extra de evaluación.</p>
-</details>
-
-<details>
-<summary>¿Ofrecen reembolso si no funciona?</summary>
-<p>No ofrezco reembolso automático porque el setup requiere horas de trabajo personalizado.</p>
-<p>Sin embargo: si sigues mis instrucciones y no recibes ningún mensaje en 7 días después del lanzamiento, trabajamos juntos hasta resolver el problema sin costo adicional.</p>
-</details>
-
-<details>
-<summary>¿Cómo empiezo?</summary>
-<p>Muy simple:</p>
-<ol>
-<li>Haz clic en "Quiero RADAR™" y mándame un mensaje por WhatsApp</li>
-<li>Agendamos una llamada de diagnóstico (30 min)</li>
-<li>Si es viable para tu negocio, confirmas el setup</li>
-<li>En 5-7 días estás recibiendo mensajes</li>
-</ol>
-<p>Solo quedan 3 cupos este mes (trabajo con máximo 3 negocios nuevos al mes para garantizar calidad).</p>
-</details>
-</div>
-</div>
-</section>
-
-<!-- CTA FINAL -->
-<section class="cta-final" id="cta">
-<div class="container">
-<span class="badge-red mb-24">OFERTA LIMITADA: 3 CUPOS</span>
-<h2>¿Listo para Recibir tus Primeros Mensajes?</h2>
-<p class="lead" style="max-width:700px;margin:0 auto 24px">Setup completo en 5-7 días. Primeros resultados en 24-48h. Sin costos ocultos.</p>
-<div class="price">
-<span class="price-old">$97</span>
-<span class="price-new">→ $67 Hoy</span>
-</div>
-<p style="margin-bottom:32px">Configura tu sistema completo de Meta Ads + WhatsApp y empieza a recibir mensajes de clientes en menos de una semana</p>
-<a href="https://wa.me/573148676490?text=Quiero%20reservar%20mi%20cupo%20en%20Sistema%20RADAR%E2%84%A2%20a%20%2467" class="btn btn-primary cta-btn" target="_blank" rel="noopener" style="font-size:1.2rem;padding:20px 40px">Reservar mi Cupo Ahora</a>
-<div class="hero-badges" style="margin-top:32px">
-<span class="badge-green">Respondo en menos de 2 horas</span>
-<span class="badge-green">Atención LatAm</span>
-<span class="badge-green">Sin costos ocultos</span>
-</div>
-<div class="center mt-32">
-<span class="badge-red">Solo quedan 3 cupos - No dejes que se agoten</span>
-</div>
-</div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-<div class="container">
-<div class="footer-grid">
-<div class="footer-col">
-<h4>Navegación</h4>
-<ul>
-<li><a href="#problema">Inicio</a></li>
-<li><a href="#solucion">Solución</a></li>
-<li><a href="#caso">Resultados</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#sobre">Sobre Braulin</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>Contacto</h4>
-<ul>
-<li>+57 314 867 6490</li>
-<li>contacto@sistemaradar.com</li>
-<li>Atención LatAm</li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>Legal</h4>
-<ul>
-<li><a href="#">Política de Privacidad</a></li>
-<li><a href="#">Términos de Servicio</a></li>
-</ul>
-</div>
-<div class="footer-col">
-<h4>Empieza Ahora</h4>
-<p class="small">Solo quedan 3 cupos disponibles este mes</p>
-<a href="https://wa.me/573148676490?text=Quiero%20RADAR%E2%84%A2" class="btn btn-primary mt-24 cta-btn" target="_blank" rel="noopener">Quiero RADAR™</a>
-<p class="small mt-24">Respondo en menos de 2 horas</p>
-</div>
-</div>
-<div class="footer-bottom">
-<p>©2025 Sistema RADAR™ by Braulin Betancourt. Todos los derechos reservados.</p>
-</div>
-</div>
-</footer>
-
-<!-- FLOAT BUTTON -->
-<a href="https://wa.me/573148676490?text=Hola%2C%20quiero%20m%C3%A1s%20info%20sobre%20Sistema%20RADAR%E2%84%A2" class="float-wa cta-btn" target="_blank" rel="noopener">
-<svg viewBox="0 0 24 24" fill="currentColor">
-<path d="M12 2C6.5 2 2 6.2 2 11.5c0 1.9.6 3.7 1.6 5.2L2 22l5.5-1.4c1.5.8 3.1 1.2 4.8 1.2 5.5 0 10-4.2 10-9.3C22.3 6.2 17.7 2 12 2Z" fill="#25D366"/>
-</svg>
-<span>WhatsApp</span>
+<a href="#demo" class="btn btn-secondary">
+▶ Ver Demo 45s
 </a>
+</div>
+
+<div class="footer-badges">
+<div class="footer-badge">
+<span class="footer-badge-icon">⏱</span>
+<span>Respondo en < 2 horas</span>
+</div>
+<div class="footer-badge">
+<span class="footer-badge-icon">🌎</span>
+<span>Atención LatAm</span>
+</div>
+<div class="footer-badge">
+<span class="footer-badge-icon">💰</span>
+<span>Sin costos ocultos</span>
+</div>
+</div>
+
+<p class="small-note">*Resultados variables según industria y presupuesto. Inversión en Ads no incluida.</p>
+</div>
+
+<div class="hero-right">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=900&fit=crop" alt="Meta Ads Dashboard" loading="lazy">
+<div class="roi-badge">
+<div class="roi-icon">📈</div>
+<div class="roi-text">
+<div class="roi-number">2.8x</div>
+<div class="roi-label">ROI Promedio</div>
+</div>
+</div>
+</div>
+</section>
 
 <script>
-// Tabs modos
-const modeTabs=document.querySelectorAll('.mode-tab');
-const modePanels={base:document.getElementById('mode-base'),avanzado:document.getElementById('mode-avanzado')};
-modeTabs.forEach(tab=>{
-tab.addEventListener('click',()=>{
-modeTabs.forEach(t=>t.classList.remove('active'));
-tab.classList.add('active');
-const mode=tab.dataset.mode;
-Object.keys(modePanels).forEach(k=>modePanels[k].classList.remove('active'));
-modePanels[mode].classList.add('active');
-if(typeof fbq!=='undefined')fbq('trackCustom','ModoToggle',{mode});
-})
-});
-
-// Track CTA clicks
-document.querySelectorAll('.cta-btn').forEach(btn=>{
+document.querySelectorAll('a[href^="https://wa.me"]').forEach(btn=>{
 btn.addEventListener('click',()=>{
 if(typeof fbq!=='undefined'){
 fbq('track','Contact');
-fbq('trackCustom','CTAClick',{text:btn.textContent.trim()});
+fbq('trackCustom','WhatsAppClick',{placement:'hero'});
 }
-console.log('CTA clicked:',btn.textContent.trim());
-})
+console.log('WhatsApp CTA clicked');
 });
-
-// Scroll depth
-let s25=0,s50=0,s75=0,s100=0;
-window.addEventListener('scroll',()=>{
-const pct=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;
-if(pct>25&&!s25){s25=1;if(typeof fbq!=='undefined')fbq('trackCustom','Scroll25')}
-if(pct>50&&!s50){s50=1;if(typeof fbq!=='undefined')fbq('trackCustom','Scroll50')}
-if(pct>75&&!s75){s75=1;if(typeof fbq!=='undefined')fbq('trackCustom','Scroll75')}
-if(pct>95&&!s100){s100=1;if(typeof fbq!=='undefined')fbq('trackCustom','Scroll100')}
 });
 </script>
 </body>
